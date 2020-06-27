@@ -7,6 +7,7 @@
     <title>Home - Brand</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
@@ -16,17 +17,17 @@
 
 <body>
     <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
-        <div class="container"><a class="navbar-brand logo" href="#">TheCommunity Earth</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse"
-                id="navcol-1">
+        <div class="container"><img src="assets/img/tcelogo-1%20copy%202.png" style="padding: 4px;padding-right: 21px;padding-left: -30px;opacity: 1;"><a class="navbar-brand logo" href="#">TheCommunityEarth</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div
+                class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="features.html">Tutorial</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="tutorial.html">Tutorial</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="https://discord.gg/ZwxsC6C">Discord</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="https://map.thecommunity.earth">DynMap</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="https://thecommunityearth.buycraft.net">Donation Shop</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="map.html">Live Map</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="shop.html">Donation Shop</a></li>
                 </ul>
-            </div>
+        </div>
         </div>
     </nav>
     <main class="page landing-page"><section class="clean-block clean-hero" style="background-image:url('assets/img/tech/map.png');color:rgba(50, 100, 100, 0.8);">
@@ -75,26 +76,21 @@
         <section class="clean-block features">
             <div class="container">
                 <div class="block-heading">
-                    <h2 class="text-info">Features</h2>
-                    <p>What sets our server apart from others?&nbsp;</p>
+                    <h2 class="text-info">Support and Rules</h2>
+                    <p>Need help?</p>
                 </div>
                 <div class="row justify-content-center">
-                    <div data-aos="zoom-in" data-aos-once="true" class="col-md-5 feature-box"><i class="icon-star icon"></i>
-                        <h4>Customly Designed Plugins</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p>
-                    </div>
-                    <div data-aos="zoom-in" data-aos-once="true" class="col-md-5 feature-box"><i class="icon-pencil icon"></i>
-                        <h4></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p>
-                    </div>
-                    <div data-aos="zoom-in" data-aos-once="true" class="col-md-5 feature-box"><i class="icon-screen-smartphone icon"></i>
-                        <h4>Custom Play Experience</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p>
-                    </div>
-                    <div data-aos="zoom-in" data-aos-once="true" class="col-md-5 feature-box"><i class="icon-refresh icon"></i>
-                        <h4>All Browser Compatibility</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p>
-                    </div>
+                    <div data-aos="zoom-in" data-aos-once="true" class="col-md-5 feature-box"><i class="fab fa-discord icon"></i>
+                        <h4>Need Help?</h4>
+                        <p>Need help with an issue! No problem! Hop onto our discord and ask any staff for help!</p><a class="btn btn-primary" role="button" data-bs-hover-animate="rubberBand" href="https://discord.gg/ZwxsC6C">Join Discord</a></div>
+                    <div data-aos="zoom-in"
+                        data-aos-once="true" class="col-md-5 feature-box"><i class="icon-pencil icon"></i>
+                        <h4>Apply for Staff</h4>
+                        <p>Want to apply for staff? Well look no further! You can apply here!</p><a class="btn btn-primary" role="button" data-bs-hover-animate="rubberBand" href="https://discord.gg/ZwxsC6C">Apply Here</a></div>
+                    <div data-aos="zoom-in" data-aos-once="true"
+                        class="col-md-5 feature-box"><i class="fas fa-scroll icon"></i>
+                        <h4>Rules</h4>
+                        <p>Looking for the rules? Well, look no further! Here is a list of the rules!</p><a class="btn btn-primary" role="button" data-bs-hover-animate="rubberBand" href="https://discord.gg/ZwxsC6C">Go to Rules</a></div>
                 </div>
             </div>
         </section>
@@ -130,41 +126,30 @@
     </main>
     <footer class="page-footer dark">
         <div class="container">
-            <div class="row">
+            <div class="row" style="opacity: 1;">
                 <div class="col-sm-3">
                     <h5>Get started</h5>
                     <ul>
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">Server IP</a></li>
-                        <li><a href="#">Join Our Discord!</a></li>
+                        <li><a href="assets/img/tech/map.png">Server IP</a></li>
+                        <li><a href="https://discord.gg/ZwxsC6C">Join Our Discord!</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-3">
                     <h5>About us</h5>
                     <ul>
-                        <li><a href="#">Company Information</a></li>
                         <li><a href="#">Contact us</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-3">
                     <h5>Support</h5>
                     <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Help desk</a></li>
-                        <li><a href="#">Forums</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3">
-                    <h5>Legal</h5>
-                    <ul>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Terms of Use</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="footer-copyright"><p>© 2020 Copyright Tet 2020-2020<a href= "https://www.youtube.com/watch?v=dQw4w9WgXcQ"> Made Using TetWebBuilder </a></p></div>
+        <div class="footer-copyright"><p>© 2020 Copyright Tet 2020-2020<a href= "https://www.youtube.com/watch?v=dQw4w9WgXcQ"> Made Using GuavaWebBuilder </a></p></div>
     </footer>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
