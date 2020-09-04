@@ -82,3 +82,8 @@ section.features .feature-item i {
 header.masthead .header-content h1 {
 }
 
+a {
+  color: rgb(216,167,157);
+  transition: all .35s;
+}
+
