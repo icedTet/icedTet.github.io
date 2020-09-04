@@ -1,0 +1,81 @@
+.bg-primary {
+  background: #101010;
+  background: linear-gradient(rgb(33,33,33),rgb(13,13,13));
+}
+
+.btn.active, .btn:active, .btn:focus, .btn:hover {
+  color: #000000;
+  border-color: #c3c3c3;
+  background-color: rgb(216,167,157);
+}
+
+.btn-outline-warning:not(:disabled):not(.disabled).active, .btn-outline-warning:not(:disabled):not(.disabled):active, .show > .btn-outline-warning.dropdown-toggle {
+  color: #662d14;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: rgb(216,167,157);
+  text-align: left;
+  background-color: rgb(52,52,52);
+}
+
+header.masthead {
+  position: relative;
+  width: 100%;
+  padding-top: 150px;
+  padding-bottom: 100px;
+  color: #3e3e3e;
+  background: #7b4397;
+  background: linear-gradient(270deg,#7b4397,#dc2430);
+}
+
+#mainNav {
+  border-color: rgb(35,35,35);
+  background-color: #292929;
+  transition: all .35s;
+}
+
+.bg-dark {
+  background-color: rgb(33,33,33)!important;
+}
+
+section.features .feature-item i {
+  font-size: 80px;
+  display: block;
+  margin-bottom: 15px;
+  background: linear-gradient(rgb(216,167,157),rgb(216,167,157));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-muted {
+  color: rgb(213,216,252)!important;
+}
+
+.table td, .table th {
+  padding: .75rem;
+  vertical-align: top;
+  border-top: 0px solid #dee2e6;
+}
+
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #2d2d2d;
+}
+
+#mainNav .navbar-nav > li > a:focus:hover, #mainNav .navbar-nav > li > a:hover {
+  color: #222222;
+}
+
+#mainNav .navbar-nav > li > a.active {
+  color: #ffffff!important;
+  background-color: transparent;
+}
+
