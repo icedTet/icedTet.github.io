@@ -51,84 +51,178 @@
         </div>
     </header>
     <section id="download" class="download text-center bg-primary" style="height: 2500px;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 mx-auto" style="height: 1337px;">
-                    <h2 data-aos="zoom-in" data-aos-duration="1000" class="section-heading" style="color: rgb(216,167,157);"></h2>
-                    <p data-aos="zoom-in-up" data-aos-duration="1000"></p>
-                    <div class="table-responsive">
-                        <table class="table">
-                            <thead>
-                                <tr style="color: rgb(216,167,157);">
-                                    <th>Command</th>
-                                    <th>Description</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr data-aos="fade-right" style="color: rgb(216,167,157);">
-                                    <td>nad help</td>
-                                    <td>Brings up the help tab</td>
-                                </tr>
-                                <tr data-aos="fade-right" style="color: rgb(216,167,157);">
-                                    <td>nad mute @Mention &lt;Time&gt;</td>
-                                    <td>Assigns the role&nbsp; 'Muted' to a person for a specified dutation (Mod)<br>Time Format: 5d4h3m2s (5 Days 4 Hours 3 Minutes 2 Seconds)<br>Will Create 'Muted' Role with preset perms if doesn't exist</td>
-                                </tr>
-                                <tr data-aos="fade-right" style="color: rgb(216,167,157);">
-                                    <td>nad purge &lt;Amount&gt;</td>
-                                    <td>Removes the amount of messages specified from the&nbsp;<br>Text Channel the command was activated in (Mod)</td>
-                                </tr>
-                                <tr data-aos="fade-right" style="color: rgb(216,167,157);">
-                                    <td>nad unmute @Mention</td>
-                                    <td>Removes the 'Muted' Role if user has role (Mod)</td>
-                                </tr>
-                                <tr data-aos="fade-right" style="color: rgb(216,167,157);">
-                                    <td>nad uwumode</td>
-                                    <td>Toggles UwUMode ON or OFF for the Text Channel <br>(Will not work in announcement Channels) <br>(LIMITED TO 2 TOGGLES EVERY 10 MINS/Channel)</td>
-                                </tr>
-                                <tr data-aos="fade-right" style="color: rgb(216,167,157);">
-                                    <td>nad pfp @Mention</td>
-                                    <td>Returns the mentioned user's Profile Picture</td>
-                                </tr>
-                                <tr data-aos="fade-right" style="color: rgb(216,167,157);">
-                                    <td>nad go kys</td>
-                                    <td>Tells Nadeko to go KYS ( Why would you do such a thing ;-;)</td>
-                                </tr>
-                                <tr data-aos="fade-right" style="color: rgb(216,167,157);">
-                                    <td>nad nhentai &lt;SAUCE&gt;</td>
-                                    <td>&nbsp;Returns information about the SAUCE given.<br>&nbsp;Only works in NSFW Channels.</td>
-                                </tr>
-                                <tr data-aos="fade-right" style="color: rgb(216,167,157);">
-                                    <td>nad nick @Mention NICK</td>
-                                    <td>Nicknames the specified user to NICK and will <br>prevent any changes to thenick until you clear the nick. <br>OR if NICK is $$clear, it will clear the nick</td>
-                                </tr>
-                                <tr data-aos="fade" style="color: rgb(216,167,157);">
-                                    <td>nad play ITEM</td>
-                                    <td>Will add the ITEM to queue or play it if nothing is playing.<br>ITEM can be : a Youtube Playlist, a Playlist Key,<br>&nbsp;a Youtube Song Link, A Search Term</td>
-                                </tr>
-                                <tr data-aos="fade-right" style="color: rgb(216,167,157);">
-                                    <td>nad vs</td>
-                                    <td>Votes in Favor of skipping the song. Requires a Majority in the VC</td>
-                                </tr>
-                                <tr data-aos="fade-right" style="color: rgb(216,167,157);">
-                                    <td>nad queue</td>
-                                    <td>Gets the Current Queue and displays the first 20.</td>
-                                </tr>
-                                <tr data-aos="fade-right" style="color: rgb(216,167,157);">
-                                    <td>nad remove NUM</td>
-                                    <td>Removes the NUMth song in the Queue, or clears the queue if NUM is "all". Will not work if user posesses the 'NoRemoveMusic' role</td>
-                                </tr>
-                                <tr data-aos="fade-right" style="color: rgb(216,167,157);">
-                                    <td>nad np</td>
-                                    <td>Gets the currently playing song&nbsp;</td>
-                                </tr>
-                                <tr data-aos="fade-right" style="color: rgb(216,167,157);">
-                                    <td>nad loop</td>
-                                    <td>Toggles Loop Mode ON or OFF (Loop Mode basically just copies the songs to the back of the queue every time they play)</td>
-                                </tr>
-                            </tbody>
-                        </table>
+        <div>
+            <ul class="nav nav-tabs" style="padding: 0;width: 795px;margin: 201px;margin-bottom: 0;">
+                <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-1" style="background-color: rgb(55,55,55);color: rgb(216,167,157);">Moderation</a></li>
+                <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-2" style="background-color: rgb(55,55,55);color: rgb(216,167,157);">Fun</a></li>
+                <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-3" style="background-color: rgb(55,55,55);color: rgb(216,167,157);">Music</a></li>
+                <li class="nav-item"><a class="nav-link active" role="tab" data-toggle="tab" href="#tab-4" style="background-color: rgb(55,55,55);color: rgb(216,167,157);">Levelling</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade" role="tabpanel" id="tab-1" style="filter: blur(0px);">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 mx-auto" style="height: 1337px;">
+                                <h2 data-aos="zoom-in" data-aos-duration="1000" class="section-heading" style="color: rgb(216,167,157);"></h2>
+                                <p data-aos="zoom-in-up" data-aos-duration="1000"></p>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr style="color: rgb(216,167,157);">
+                                                <th>Command</th>
+                                                <th>Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr data-aos="fade-right" style="color: rgb(216,167,157);">
+                                                <td>nad mute @Mention &lt;Time&gt;</td>
+                                                <td>Assigns the role&nbsp; 'Muted' to a person for a specified dutation (Mod)<br>Time Format: 5d4h3m2s (5 Days 4 Hours 3 Minutes 2 Seconds)<br>Will Create 'Muted' Role with preset perms if doesn't exist</td>
+                                            </tr>
+                                            <tr data-aos="fade-right" style="color: rgb(216,167,157);">
+                                                <td>nad purge &lt;Amount&gt;</td>
+                                                <td>Removes the amount of messages specified from the&nbsp;<br>Text Channel the command was activated in (Mod)</td>
+                                            </tr>
+                                            <tr data-aos="fade-right" style="color: rgb(216,167,157);">
+                                                <td>nad unmute @Mention</td>
+                                                <td>Removes the 'Muted' Role if user has role (Mod)</td>
+                                            </tr>
+                                            <tr data-aos="fade-right" style="color: rgb(216,167,157);">
+                                                <td>nad uwumode</td>
+                                                <td>Toggles UwUMode ON or OFF for the Text Channel <br>(Will not work in announcement Channels) <br>(LIMITED TO 2 TOGGLES EVERY 10 MINS/Channel)</td>
+                                            </tr>
+                                            <tr data-aos="fade-right" style="color: rgb(216,167,157);">
+                                                <td>nad nick @Mention NICK</td>
+                                                <td>Nicknames the specified user to NICK and will <br>prevent any changes to thenick until you clear the nick. <br>OR if NICK is $$clear, it will clear the nick</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="badges"><a class="btn btn-outline-warning btn-xl js-scroll-trigger" role="button" data-aos="zoom-in-up" data-aos-duration="1000" href="https://discord.com/oauth2/authorize?client_id=747901310749245561&amp;scope=bot&amp;permissions=8">Invite Nadeko Now</a></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="badges"><a class="btn btn-outline-warning btn-xl js-scroll-trigger" role="button" data-aos="zoom-in-up" data-aos-duration="1000" href="https://discord.com/oauth2/authorize?client_id=747901310749245561&amp;scope=bot&amp;permissions=8">Invite Nadeko Now</a></div>
+                </div>
+                <div class="tab-pane fade" role="tabpanel" id="tab-2">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 mx-auto" style="height: 1337px;">
+                                <h2 data-aos="zoom-in" data-aos-duration="1000" class="section-heading" style="color: rgb(216,167,157);"></h2>
+                                <p data-aos="zoom-in-up" data-aos-duration="1000"></p>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr style="color: rgb(216,167,157);">
+                                                <th>Command</th>
+                                                <th>Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr data-aos="fade-right" style="color: rgb(216,167,157);">
+                                                <td>nad uwumode</td>
+                                                <td>Toggles UwUMode ON or OFF for the Text Channel <br>(Will not work in announcement Channels) <br>(LIMITED TO 2 TOGGLES EVERY 10 MINS/Channel)</td>
+                                            </tr>
+                                            <tr data-aos="fade-right" style="color: rgb(216,167,157);">
+                                                <td>nad go kys</td>
+                                                <td>Tells Nadeko to go KYS ( Why would you do such a thing ;-;)</td>
+                                            </tr>
+                                            <tr data-aos="fade-right" style="color: rgb(216,167,157);">
+                                                <td>nad nhentai &lt;SAUCE&gt;</td>
+                                                <td>&nbsp;Returns information about the SAUCE given.<br>&nbsp;Only works in NSFW Channels.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="badges"><a class="btn btn-outline-warning btn-xl js-scroll-trigger" role="button" data-aos="zoom-in-up" data-aos-duration="1000" href="https://discord.com/oauth2/authorize?client_id=747901310749245561&amp;scope=bot&amp;permissions=8">Invite Nadeko Now</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" role="tabpanel" id="tab-3">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 mx-auto" style="height: 1337px;">
+                                <h2 data-aos="zoom-in" data-aos-duration="1000" class="section-heading" style="color: rgb(216,167,157);"></h2>
+                                <p data-aos="zoom-in-up" data-aos-duration="1000"></p>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr style="color: rgb(216,167,157);">
+                                                <th style="width: 228px;">Command</th>
+                                                <th>Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr data-aos="fade" style="color: rgb(216,167,157);">
+                                                <td>nad play ITEM</td>
+                                                <td>Will add the ITEM to queue or play it if nothing is playing.<br>ITEM can be : a Youtube Playlist, a Playlist Key,<br>&nbsp;a Youtube Song Link, A Search Term (When using the search, if it doesnt return any
+                                                    verification statement, try appending 'song' to your query</td>
+                                            </tr>
+                                            <tr data-aos="fade-right" style="color: rgb(216,167,157);">
+                                                <td>nad vs</td>
+                                                <td>Votes in Favor of skipping the song. Requires a Majority in the VC</td>
+                                            </tr>
+                                            <tr data-aos="fade-right" style="color: rgb(216,167,157);">
+                                                <td>nad queue</td>
+                                                <td>Gets the Current Queue and displays the first 20.</td>
+                                            </tr>
+                                            <tr data-aos="fade-right" style="color: rgb(216,167,157);">
+                                                <td>nad remove NUM</td>
+                                                <td>Removes the NUMth song in the Queue, or clears the queue if NUM is "all". Will not work if user posesses the 'NoRemoveMusic' role</td>
+                                            </tr>
+                                            <tr data-aos="fade-right" style="color: rgb(216,167,157);">
+                                                <td>nad np</td>
+                                                <td>Gets the currently playing song&nbsp;</td>
+                                            </tr>
+                                            <tr data-aos="fade-right" style="color: rgb(216,167,157);">
+                                                <td>nad loop</td>
+                                                <td>Toggles Loop Mode ON or OFF (Loop Mode basically just copies the songs to the back of the queue every time they play)</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="badges"><a class="btn btn-outline-warning btn-xl js-scroll-trigger" role="button" data-aos="zoom-in-up" data-aos-duration="1000" href="https://discord.com/oauth2/authorize?client_id=747901310749245561&amp;scope=bot&amp;permissions=8">Invite Nadeko Now</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade show active" role="tabpanel" id="tab-4">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 mx-auto" style="height: 1337px;">
+                                <h2 data-aos="zoom-in" data-aos-duration="1000" class="section-heading" style="color: rgb(216,167,157);"></h2>
+                                <p data-aos="zoom-in-up" data-aos-duration="1000"></p>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr style="color: rgb(216,167,157);">
+                                                <th style="width: 228px;">Command</th>
+                                                <th>Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr data-aos="fade" style="color: rgb(216,167,157);">
+                                                <td>nad rank</td>
+                                                <td>Returns an image Rank Card.</td>
+                                            </tr>
+                                            <tr data-aos="fade-right" style="color: rgb(216,167,157);">
+                                                <td>nad top</td>
+                                                <td>Displays the top rankers in your discord (Limit of 20)</td>
+                                            </tr>
+                                            <tr data-aos="fade-right" style="color: rgb(216,167,157);">
+                                                <td>nad cust &lt;Params&gt;</td>
+                                                <td>(Coming Soon) Customizes Your Rank Card</td>
+                                            </tr>
+                                            <tr data-aos="fade-right" style="color: rgb(216,167,157);">
+                                                <td>nad defcust &lt;Params&gt;</td>
+                                                <td>(Coming Soon) Customizes the Server Default Card Style (Mod Role Required)</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="badges"><a class="btn btn-outline-warning btn-xl js-scroll-trigger" role="button" data-aos="zoom-in-up" data-aos-duration="1000" href="https://discord.com/oauth2/authorize?client_id=747901310749245561&amp;scope=bot&amp;permissions=8">Invite Nadeko Now</a></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
