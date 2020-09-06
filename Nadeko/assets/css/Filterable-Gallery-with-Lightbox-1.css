@@ -16,7 +16,7 @@
   text-align: center;
   font-size: 18px;
   text-transform: uppercase;
-  margin: 30px 0 40px;
+  margin: 30px 0 15px;
 }
 
 .filtr-controls span {
@@ -29,7 +29,7 @@
 }
 
 .filtr-controls span:hover, .filtr-controls span.active {
-  color: rgb(109,49,96);
+  color: #000;
 }
 
 .filtr-controls span:after {
