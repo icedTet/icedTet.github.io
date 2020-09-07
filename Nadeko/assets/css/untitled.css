@@ -87,3 +87,7 @@ a {
   transition: all .35s;
 }
 
+a:focus, a:hover {
+  color: #fcbd20;
+}
+
