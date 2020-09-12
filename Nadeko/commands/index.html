@@ -74,9 +74,9 @@
                     </div>
                     <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="4" style="background-color: #333333;margin: 32px;">
                         <p style="color: rgb(94,176,187);font-size: 28px;font-family: Catamaran, sans-serif;">Music</p>
-                        <p style="color: rgb(152,14,113);font-size: 23px;font-family: Catamaran, sans-serif;">nad queue</p>
-                        <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">nad queue</p>
-                        <p class="text-break" style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">returns up to the first 20 items from the queue</p>
+                        <p style="color: rgb(152,14,113);font-size: 23px;font-family: Catamaran, sans-serif;">nad queue #</p>
+                        <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">nad queue 5 OR nad queue</p>
+                        <p class="text-break" style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">returns up to the first 20 items from the queue starting from the number given, or 0</p>
                     </div>
                     <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="4" style="background-color: #333333;margin: 32px;">
                         <p style="color: rgb(94,176,187);font-size: 28px;font-family: Catamaran, sans-serif;">Music</p>
@@ -168,6 +168,18 @@
                         <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">nad top</p>
                         <p style="color: rgb(216,167,157);font-size: 13px;font-family: Catamaran, sans-serif;">returns a leaderboard of the top 20 people in the server with the highest levels.</p>
                     </div>
+                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="5" style="background-color: #333333;margin: 32px;">
+                        <p style="color: rgb(230,166,0);font-size: 28px;font-family: Catamaran, sans-serif;">Levelling</p>
+                        <p style="color: rgb(152,14,113);font-size: 23px;font-family: Catamaran, sans-serif;">nad levelrewards</p>
+                        <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">nad levelrewards</p>
+                        <p style="color: rgb(216,167,157);font-size: 13px;font-family: Catamaran, sans-serif;">Returns all of the roles you can get by levelling up on that server</p>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="5" style="background-color: #333333;margin: 32px;">
+                        <p style="color: rgb(230,166,0);font-size: 28px;font-family: Catamaran, sans-serif;">Levelling</p>
+                        <p style="color: rgb(152,14,113);font-size: 22px;font-family: Catamaran, sans-serif;">nad levelreward LEVEL ROLEID</p>
+                        <p style="color: rgb(216,167,157);font-size: 18px;font-family: Catamaran, sans-serif;">nad levelreward 5 59128051 OR <br>nad levelreward 5 none</p>
+                        <p style="color: rgb(216,167,157);font-size: 13px;font-family: Catamaran, sans-serif;">Sets a role to be given once somebody achieves that level. Or clears that role given when roleid is NONE<br>(Requires Role named Admin)</p>
+                    </div>
                     <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="6" style="background-color: #333333;margin: 32px;">
                         <p style="color: rgb(0,159,92);font-size: 28px;font-family: Catamaran, sans-serif;">General</p>
                         <p style="color: rgb(152,14,113);font-size: 23px;font-family: Catamaran, sans-serif;">nad pfp @Mention</p>
@@ -196,13 +208,13 @@
                         <p style="color: rgb(0,159,92);font-size: 28px;font-family: Catamaran, sans-serif;">General</p>
                         <p style="color: rgb(152,14,113);font-size: 23px;font-family: Catamaran, sans-serif;">nad rsub SUBREDDIT</p>
                         <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">nad rsub memes</p>
-                        <p style="color: rgb(216,167,157);font-size: 13px;font-family: Catamaran, sans-serif;">tags the channel that the message is sent in to recieve posts from the subreddit specified (r/memes in this example). (Max 1 Subreddit/channel and 2 Subreddits/Guild)</p>
+                        <p style="color: rgb(216,167,157);font-size: 13px;font-family: Catamaran, sans-serif;">tags the channel that the message is sent in to recieve posts from the subreddit specified (r/memes in this example). (Max 1 Subreddit/channel and 2 Subreddits/Guild) (Requires Mod)</p>
                     </div>
                     <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="6, 2, 1" style="background-color: #333333;margin: 32px;">
                         <p style="color: rgb(0,159,92);font-size: 28px;font-family: Catamaran, sans-serif;">General</p>
                         <p style="color: rgb(152,14,113);font-size: 23px;font-family: Catamaran, sans-serif;">nad runsub</p>
                         <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">nad runsub</p>
-                        <p style="color: rgb(216,167,157);font-size: 13px;font-family: Catamaran, sans-serif;">untags the channel that the message is sent in to stop recieving posts from the subreddit specified.</p>
+                        <p style="color: rgb(216,167,157);font-size: 13px;font-family: Catamaran, sans-serif;">untags the channel that the message is sent in to stop recieving posts from the subreddit specified.<br>(Requires Mod)</p>
                     </div>
             </div>
             </div>
@@ -222,6 +234,7 @@
     <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="../assets/js/bs-init.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+    <script src="../assets/js/PJansari---Count-Down-FlipClock-with-Redirect.js"></script>
     <script src="../assets/js/Filterable-Gallery-with-Lightbox.js"></script>
     <script src="../assets/js/Data-Table-with-Search-Sort-Filter-and-Zoom-using-TableSorter.js"></script>
     <script src="../assets/js/Filterable-Gallery.js"></script>
