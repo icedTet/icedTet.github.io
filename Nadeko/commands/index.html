@@ -63,9 +63,11 @@
         <section id="filtr-gallery" style="background-color: rgba(241,241,241,0);">
             <div class="container">
                 <h1 data-aos="fade-left" class="text-center" style="font-size: 57px;color: rgb(216,167,157);font-family: Catamaran, sans-serif;">Command List</h1>
-                <div data-aos="fade-down" class="filtr-controls"><span class="active" data-filter="all">all </span><span data-filter="6">General</span><span data-filter="1">Moderation</span><span data-filter="4">Music</span><span data-filter="2">fun</span><span data-filter="3">lewd</span><span data-filter="5">levelling</span></div>
-                <div
-                    class="row filtr-container" style="margin: -30px;">
+                <div data-aos="fade-down" class="filtr-controls"><span class="active" data-filter="all">all </span><span data-filter="6">General</span><span data-filter="1">Moderation</span><span data-filter="4">Music</span><span data-filter="2">fun</span><span data-filter="3">lewd</span><span data-filter="5">levelling</span>
+                    <span
+                        data-filter="7">Admin settings</span>
+                </div>
+                <div class="row filtr-container" style="margin: -30px;">
                     <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="4" style="background-color: #333333;margin: 0;">
                         <p style="color: rgb(94,176,187);font-size: 28px;font-family: Catamaran, sans-serif;">Music</p>
                         <p style="color: rgb(152,14,113);font-size: 23px;font-family: Catamaran, sans-serif;">nad play &lt;Item&gt;</p>
@@ -108,14 +110,14 @@
                         <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">nad mute @User#0001 5d4h3m2s</p>
                         <p style="color: rgb(216,167,157);font-size: 14px;font-family: Catamaran, sans-serif;">mutes the user for the time specified (5 days, 4 hours, 3 mins and 2 secs in this example)<br><br></p>
                     </div>
-                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="1" style="background-color: #333333;margin: 0;">
-                        <p class="text-nowrap text-truncate" style="color: rgb(124,187,94);font-size: 28px;font-family: Catamaran, sans-serif;">Moderation(Coming Soon)</p>
+                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="7" style="background-color: #333333;margin: 0;">
+                        <p class="text-nowrap text-truncate" style="color: rgb(130,150,255);font-size: 28px;font-family: Catamaran, sans-serif;">Admin Settings (Coming Soon)</p>
                         <p style="color: rgb(152,14,113);font-size: 23px;font-family: Catamaran, sans-serif;">nad dcust bg NAME</p>
                         <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">nad dcust bg NAME</p>
                         <p style="color: rgb(216,167,157);font-size: 14px;font-family: Catamaran, sans-serif;">mutes the user for the time specified (5 days, 4 hours, 3 mins and 2 secs in this example)<br><br></p>
                     </div>
-                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="1" style="background-color: #333333;margin: 0;">
-                        <p class="text-nowrap text-truncate" style="color: rgb(124,187,94);font-size: 28px;font-family: Catamaran, sans-serif;">Moderation(Coming Soon)</p>
+                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="7" style="background-color: #333333;margin: 0;">
+                        <p class="text-nowrap text-truncate" style="color: rgb(130,150,255);font-size: 28px;font-family: Catamaran, sans-serif;">Admin Settings (Coming Soon)</p>
                         <p style="color: rgb(152,14,113);font-size: 23px;font-family: Catamaran, sans-serif;">nad dcust color NAME</p>
                         <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">nad mute @User#0001 5d4h3m2s</p>
                         <p style="color: rgb(216,167,157);font-size: 14px;font-family: Catamaran, sans-serif;">mutes the user for the time specified (5 days, 4 hours, 3 mins and 2 secs in this example)<br><br></p>
@@ -174,8 +176,8 @@
                         <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">nad levelrewards</p>
                         <p style="color: rgb(216,167,157);font-size: 13px;font-family: Catamaran, sans-serif;">Returns all of the roles you can get by levelling up on that server</p>
                     </div>
-                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="5" style="background-color: #333333;margin: 0;">
-                        <p style="color: rgb(230,166,0);font-size: 28px;font-family: Catamaran, sans-serif;">Levelling</p>
+                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="5, 7" style="background-color: #333333;margin: 0;">
+                        <p style="color: rgb(130,150,255);font-size: 28px;font-family: Catamaran, sans-serif;">Admin Settings</p>
                         <p style="color: rgb(152,14,113);font-size: 22px;font-family: Catamaran, sans-serif;">nad levelreward LEVEL ROLEID</p>
                         <p style="color: rgb(216,167,157);font-size: 18px;font-family: Catamaran, sans-serif;">nad levelreward 5 59128051 OR <br>nad levelreward 5 none</p>
                         <p style="color: rgb(216,167,157);font-size: 13px;font-family: Catamaran, sans-serif;">Sets a role to be given once somebody achieves that level. Or clears that role given when roleid is NONE<br>(Requires Role named Admin)</p>
@@ -216,7 +218,7 @@
                         <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">nad runsub</p>
                         <p style="color: rgb(216,167,157);font-size: 13px;font-family: Catamaran, sans-serif;">untags the channel that the message is sent in to stop recieving posts from the subreddit specified.<br>(Requires Mod)</p>
                     </div>
-            </div>
+                </div>
             </div>
         </section>
     </section>
