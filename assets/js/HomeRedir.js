@@ -1,5 +1,5 @@
 // change link to where you want to redirect after counter stops
-var redirectLink = 'https://discord.com/oauth2/authorize?client_id=747901310749245561&scope=bot&permissions=8';
+var redirectLink = 'https://icedtet.github.io/Dazai';
 
 // starting time of countdown
 var startTime = 0;
