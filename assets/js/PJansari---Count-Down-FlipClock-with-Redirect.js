@@ -2,7 +2,7 @@
 var redirectLink = 'https://discord.com/oauth2/authorize?client_id=747901310749245561&scope=bot&permissions=8';
 
 // starting time of countdown
-var startTime = 0.1;
+var startTime = 0.5;
 
 /*
 	Base.js, version 1.1a

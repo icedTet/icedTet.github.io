@@ -2,7 +2,7 @@
 var redirectLink = 'https://icedtet.github.io/Dazai';
 
 // starting time of countdown
-var startTime = 0.1;
+var startTime = 0.5;
 
 /*
 	Base.js, version 1.1a
