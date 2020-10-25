@@ -43,9 +43,9 @@ httpGet(guildid).then(chans=>{
     let data = JSON.parse(chans);
     data.forEach(item => {
         element.innerHTML+="<tr>\
-        <td style=\"color: rgb(214,214,214);\">"+item.name+"</td>\
-        <td style=\"color: rgb(214,214,214);\">"+item.description+"</td>\
-        <td style=\"color: rgb(214,214,214);\">"+item.usage+"</td>\
+        <td style=\"color: rgb(214,214,214);text-align: left;\">"+item.name+"</td>\
+        <td style=\"color: rgb(214,214,214);text-align: left;\">"+item.description+"</td>\
+        <td style=\"color: rgb(214,214,214);text-align: left;\">"+item.usage+"</td>\
     </tr>"
     });
     // alert("Done!")
