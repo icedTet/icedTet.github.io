@@ -91,3 +91,7 @@ a:focus, a:hover {
   color: #fcbd20;
 }
 
+.table-bordered, .table-bordered td, .table-bordered th {
+  border: 0px solid #dee2e6;
+}
+

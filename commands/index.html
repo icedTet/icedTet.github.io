@@ -25,6 +25,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/css/theme.bootstrap_4.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
     <link rel="stylesheet" href="../assets/css/PJansari---Count-Down-FlipClock-with-Redirect.css">
+    <link rel="stylesheet" href="../assets/css/Table-With-Search-1.css">
+    <link rel="stylesheet" href="../assets/css/Table-With-Search.css">
     <link rel="stylesheet" href="../assets/css/untitled.css">
 <link rel='icon' href='favicon.ico' type='image/x-icon' sizes="16x16" />
 </head>
@@ -44,228 +46,22 @@
             </div>
         </div>
     </header>
-    <section id="download" class="download text-center bg-primary" style="height: 2500px;">
-        <section id="filtr-gallery" style="background-color: rgba(241,241,241,0);">
-            <div class="container">
-                <h1 data-aos="fade-left" class="text-center" style="font-size: 57px;color: rgb(216,167,157);font-family: Catamaran, sans-serif;">Command List</h1>
-                <div data-aos="fade-down" class="filtr-controls"><span class="active" data-filter="all">all </span><span data-filter="6">General</span><span data-filter="1">Moderation</span><span data-filter="4">Music</span><span data-filter="2">fun</span><span data-filter="3">lewd</span><span data-filter="5">levelling</span>
-                    <span
-                        data-filter="7">Admin settings</span>
-                </div>
-                <div class="row filtr-container" style="margin: -30px;">
-                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="4" style="background-color: #333333;margin: 0;">
-                        <p style="color: rgb(94,176,187);font-size: 28px;font-family: Catamaran, sans-serif;">Music</p>
-                        <p style="color: rgb(152,14,113);font-size: 23px;font-family: Catamaran, sans-serif;">nad play &lt;Item&gt;</p>
-                        <p style="color: rgb(216,167,157);font-size: 12px;font-family: Catamaran, sans-serif;">nad play mousou express, nad play LINK<br>nad play $$playlist_Key, nad play YoutubePlaylistLink</p>
-                        <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">Adds the specified &lt;Item&gt; to queue or plays it if there is nothing in the queue</p>
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="4" style="background-color: #333333;margin: 0;">
-                        <p style="color: rgb(94,176,187);font-size: 28px;font-family: Catamaran, sans-serif;">Music</p>
-                        <p style="color: rgb(152,14,113);font-size: 23px;font-family: Catamaran, sans-serif;">nad queue #</p>
-                        <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">nad queue 5 OR nad queue</p>
-                        <p class="text-break" style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">returns up to the first 20 items from the queue starting from the number given, or 0</p>
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="4" style="background-color: #333333;margin: 0;">
-                        <p style="color: rgb(94,176,187);font-size: 28px;font-family: Catamaran, sans-serif;">Music</p>
-                        <p style="color: rgb(152,14,113);font-size: 23px;font-family: Catamaran, sans-serif;">nad np</p>
-                        <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">nad np</p>
-                        <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">returns info about the song currently playing</p>
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="4" style="background-color: #333333;margin: 0;">
-                        <p style="color: rgb(94,176,187);font-size: 28px;font-family: Catamaran, sans-serif;">Music</p>
-                        <p style="color: rgb(152,14,113);font-size: 23px;font-family: Catamaran, sans-serif;">nad remove &lt;pos&gt;</p>
-                        <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">nad remove 1, nad remove all</p>
-                        <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">removes the &lt;Pos&gt;th song from the queue, or all if &lt;Pos&gt; is all. Will not work if user has the 'NoRemoveMusic' role</p>
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="4" style="background-color: #333333;margin: 0;">
-                        <p style="color: rgb(94,176,187);font-size: 28px;font-family: Catamaran, sans-serif;">Music</p>
-                        <p style="color: rgb(152,14,113);font-size: 23px;font-family: Catamaran, sans-serif;">nad vs</p>
-                        <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">nad vs</p>
-                        <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">vote skips for the song currently playing (must have a majority of non bots in the vc voting yes)</p>
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="4" style="background-color: #333333;margin: 0;">
-                        <p style="color: rgb(94,176,187);font-size: 28px;font-family: Catamaran, sans-serif;">Music</p>
-                        <p style="color: rgb(152,14,113);font-size: 23px;font-family: Catamaran, sans-serif;">nad loop</p>
-                        <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">nad loop</p>
-                        <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">Toggles Loop Mode ON or OFF (Loop Mode basically just copies the songs to the back of the queue every time they play)</p>
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="1" style="background-color: #333333;margin: 0;">
-                        <p style="color: rgb(124,187,94);font-size: 28px;font-family: Catamaran, sans-serif;">Moderation</p>
-                        <p style="color: rgb(152,14,113);font-size: 23px;font-family: Catamaran, sans-serif;">nad mute @Mention time REASON</p>
-                        <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">nad mute @User#0001 5d4h3m2s spam</p>
-                        <p style="color: rgb(216,167,157);font-size: 14px;font-family: Catamaran, sans-serif;">mutes the user for the time specified (5 days, 4 hours, 3 mins and 2 secs in this example GOES UP TO 24d20h30m)<br><br></p>
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="7" style="background-color: #333333;margin: 0;">
-                        <p class="text-nowrap text-truncate" style="color: rgb(130,150,255);font-size: 28px;font-family: Catamaran, sans-serif;">Admin Settings (Coming Soon)</p>
-                        <p style="color: rgb(152,14,113);font-size: 23px;font-family: Catamaran, sans-serif;">nad dcust bg NAME</p>
-                        <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">nad dcust bg NAME</p>
-                        <p style="color: rgb(216,167,157);font-size: 14px;font-family: Catamaran, sans-serif;">mutes the user for the time specified (5 days, 4 hours, 3 mins and 2 secs in this example)<br><br></p>
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="7" style="background-color: #333333;margin: 0;">
-                        <p class="text-nowrap text-truncate" style="color: rgb(130,150,255);font-size: 28px;font-family: Catamaran, sans-serif;">Admin Settings (Coming Soon)</p>
-                        <p style="color: rgb(152,14,113);font-size: 23px;font-family: Catamaran, sans-serif;">nad dcust color NAME</p>
-                        <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">nad dcust color NAME</p>
-                        <p style="color: rgb(216,167,157);font-size: 14px;font-family: Catamaran, sans-serif;">mutes the user for the time specified (5 days, 4 hours, 3 mins and 2 secs in this example)<br><br></p>
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="1" style="background-color: #333333;margin: 0;">
-                        <p style="color: rgb(124,187,94);font-size: 28px;font-family: Catamaran, sans-serif;">Moderation</p>
-                        <p style="color: rgb(152,14,113);font-size: 23px;font-family: Catamaran, sans-serif;">nad warn @Mention REASON</p>
-                        <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">nad warn @User#0001 Spam</p>
-                        <p style="color: rgb(216,167,157);font-size: 14px;font-family: Catamaran, sans-serif;">Warns a user for a reason</p>
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="1" style="background-color: #333333;margin: 0;">
-                        <p style="color: rgb(124,187,94);font-size: 28px;font-family: Catamaran, sans-serif;">Moderation</p>
-                        <p style="color: rgb(152,14,113);font-size: 23px;font-family: Catamaran, sans-serif;">nad removewarn ID</p>
-                        <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">nad removewarn WarnID</p>
-                        <p style="color: rgb(216,167,157);font-size: 14px;font-family: Catamaran, sans-serif;">Removes a warn given warn id (Findable doing nad warns)</p>
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="1" style="background-color: #333333;margin: 0;">
-                        <p style="color: rgb(124,187,94);font-size: 28px;font-family: Catamaran, sans-serif;">Moderation</p>
-                        <p style="color: rgb(152,14,113);font-size: 23px;font-family: Catamaran, sans-serif;">nad warns @Mention</p>
-                        <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">nad warn @User#0001</p>
-                        <p style="color: rgb(216,167,157);font-size: 14px;font-family: Catamaran, sans-serif;">Displays all warns for users (Anybody can do)</p>
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="1" style="background-color: #333333;margin: 0;">
-                        <p style="color: rgb(124,187,94);font-size: 28px;font-family: Catamaran, sans-serif;">Moderation</p>
-                        <p style="color: rgb(152,14,113);font-size: 23px;font-family: Catamaran, sans-serif;">nad unmute @Mention</p>
-                        <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">nad unmute @User#0001</p>
-                        <p style="color: rgb(216,167,157);font-size: 14px;font-family: Catamaran, sans-serif;">unmutes the user specified</p>
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="1" style="background-color: #333333;margin: 0;">
-                        <p style="color: rgb(124,187,94);font-size: 28px;font-family: Catamaran, sans-serif;">Moderation</p>
-                        <p style="color: rgb(152,14,113);font-size: 23px;font-family: Catamaran, sans-serif;">nad purge NUM</p>
-                        <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">nad purge 100</p>
-                        <p style="color: rgb(216,167,157);font-size: 14px;font-family: Catamaran, sans-serif;">purges the current chat by removing NUM<br>Messages</p>
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="1" style="background-color: #333333;margin: 0;">
-                        <p style="color: rgb(124,187,94);font-size: 28px;font-family: Catamaran, sans-serif;">Moderation</p>
-                        <p style="color: rgb(152,14,113);font-size: 23px;font-family: Catamaran, sans-serif;">nad nick @Mention NewNick</p>
-                        <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">nad nick @User#0001 Discorder</p>
-                        <p style="color: rgb(216,167,157);font-size: 13px;font-family: Catamaran, sans-serif;">sets the mentioned users nick to the nick provided and prevents further changing until nick has been cleared with 'nad nick @Mention $$clear'</p>
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="2, 3" style="background-color: #333333;margin: 0;">
-                        <p style="color: rgb(230,0,83);font-size: 28px;font-family: Catamaran, sans-serif;">Fun</p>
-                        <p style="color: rgb(152,14,113);font-size: 23px;font-family: Catamaran, sans-serif;">nad nhentai &lt;Sauce&gt;</p>
-                        <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">nad nhentai 177013</p>
-                        <p style="color: rgb(216,167,157);font-size: 13px;font-family: Catamaran, sans-serif;">returns information about the sauce specified. Works only in NSFW channels. Will return nothing if the sauce is invalid.</p>
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="2" style="background-color: #333333;margin: 0;">
-                        <p style="color: rgb(230,0,83);font-size: 28px;font-family: Catamaran, sans-serif;">Fun</p>
-                        <p style="color: rgb(152,14,113);font-size: 23px;font-family: Catamaran, sans-serif;">nad go kys</p>
-                        <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">nad go kys</p>
-                        <p style="color: rgb(216,167,157);font-size: 13px;font-family: Catamaran, sans-serif;">tells nadeko to go kill herself (Why would u do that?? ;-;).&nbsp;</p>
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="2" style="background-color: #333333;margin: 0;">
-                        <p style="color: rgb(230,0,83);font-size: 28px;font-family: Catamaran, sans-serif;">Fun</p>
-                        <p style="color: rgb(152,14,113);font-size: 23px;font-family: Catamaran, sans-serif;">nad uwumode</p>
-                        <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">nad uwumode</p>
-                        <p style="color: rgb(216,167,157);font-size: 13px;font-family: Catamaran, sans-serif;">toggles uwumode in the channel specified, role 'Mod' required. Limit 2 toggles per channel every 10 mins</p>
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="2" style="background-color: #333333;margin: 0;">
-                        <p style="color: rgb(230,0,83);font-size: 28px;font-family: Catamaran, sans-serif;">Fun</p>
-                        <p style="color: rgb(152,14,113);font-size: 23px;font-family: Catamaran, sans-serif;">nad ddg QUERY</p>
-                        <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">nad ddg Tet NGNL</p>
-                        <p style="color: rgb(216,167,157);font-size: 13px;font-family: Catamaran, sans-serif;">Searches Duck Duck Go with the specified query</p>
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="5" style="background-color: #333333;margin: 0;">
-                        <p style="color: rgb(230,166,0);font-size: 28px;font-family: Catamaran, sans-serif;">Levelling</p>
-                        <p style="color: rgb(152,14,113);font-size: 23px;font-family: Catamaran, sans-serif;">nad rank</p>
-                        <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">nad rank</p>
-                        <p style="color: rgb(216,167,157);font-size: 13px;font-family: Catamaran, sans-serif;">returns a generated card detailing your ranking in the server and level stats&nbsp;</p>
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="5" style="background-color: #333333;margin: 0;">
-                        <p style="color: rgb(230,166,0);font-size: 28px;font-family: Catamaran, sans-serif;">Levelling</p>
-                        <p style="color: rgb(152,14,113);font-size: 23px;font-family: Catamaran, sans-serif;">nad top</p>
-                        <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">nad top</p>
-                        <p style="color: rgb(216,167,157);font-size: 13px;font-family: Catamaran, sans-serif;">returns a leaderboard of the top 20 people in the server with the highest levels.</p>
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="5" style="background-color: #333333;margin: 0;">
-                        <p style="color: rgb(230,166,0);font-size: 28px;font-family: Catamaran, sans-serif;">Levelling</p>
-                        <p style="color: rgb(152,14,113);font-size: 23px;font-family: Catamaran, sans-serif;">nad levelrewards</p>
-                        <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">nad levelrewards</p>
-                        <p style="color: rgb(216,167,157);font-size: 13px;font-family: Catamaran, sans-serif;">Returns all of the roles you can get by levelling up on that server</p>
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="5, 7" style="background-color: #333333;margin: 0;">
-                        <p style="color: rgb(130,150,255);font-size: 28px;font-family: Catamaran, sans-serif;">Admin Settings</p>
-                        <p style="color: rgb(152,14,113);font-size: 22px;font-family: Catamaran, sans-serif;">nad levelreward LEVEL ROLEID</p>
-                        <p style="color: rgb(216,167,157);font-size: 18px;font-family: Catamaran, sans-serif;">nad levelreward 5 59128051 OR <br>nad levelreward 5 none</p>
-                        <p style="color: rgb(216,167,157);font-size: 13px;font-family: Catamaran, sans-serif;">Sets a role to be given once somebody achieves that level. Or clears that role given when roleid is NONE<br>(Requires Role named Admin)</p>
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="7" style="background-color: #333333;margin: 0;">
-                        <p style="color: rgb(130,150,255);font-size: 28px;font-family: Catamaran, sans-serif;">Admin Settings</p>
-                        <p style="color: rgb(152,14,113);font-size: 22px;font-family: Catamaran, sans-serif;">nad reactionrole</p>
-                        <p style="color: rgb(216,167,157);font-size: 18px;font-family: Catamaran, sans-serif;">reactionrole create ChannelID MessageID Emoji RoleID</p>
-                        <p style="color: rgb(216,167,157);font-size: 13px;font-family: Catamaran, sans-serif;">Creates a reaction role, where when a user reacts, they gain the role; unreacting removes the role</p>
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="7" style="background-color: #333333;margin: 0;">
-                        <p style="color: rgb(130,150,255);font-size: 28px;font-family: Catamaran, sans-serif;">Admin Settings</p>
-                        <p style="color: rgb(152,14,113);font-size: 22px;font-family: Catamaran, sans-serif;">nad&nbsp;<strong>setmessageevent</strong></p>
-                        <p style="color: rgb(216,167,157);font-size: 18px;font-family: Catamaran, sans-serif;">nad&nbsp;setmessageevent join CHANNELID MESSAGE</p>
-                        <p style="color: rgb(216,167,157);font-size: 13px;font-family: Catamaran, sans-serif;">Sets up custom messages for when a person Joins the server(Dm message also avalible), leaves the server, or levels up<br></p>
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="5, 7" style="background-color: #333333;margin: 0;">
-                        <p style="color: rgb(130,150,255);font-size: 28px;font-family: Catamaran, sans-serif;">Admin Settings</p>
-                        <p style="color: rgb(152,14,113);font-size: 22px;font-family: Catamaran, sans-serif;">nad delevelreward LEVEL ROLEID</p>
-                        <p style="color: rgb(216,167,157);font-size: 18px;font-family: Catamaran, sans-serif;">nad delevelreward 5 59128051 OR <br>nad delevelreward 5 none</p>
-                        <p style="color: rgb(216,167,157);font-size: 13px;font-family: Catamaran, sans-serif;">Sets a role to be removed once somebody achieves that level. Or clears that role removed when roleid is NONE. Basically the reverse of levelreward.<br>(Requires Role named Admin)</p>
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="5, 7" style="background-color: #333333;margin: 0;">
-                        <p style="color: rgb(130,150,255);font-size: 28px;font-family: Catamaran, sans-serif;">Admin Settings</p>
-                        <p style="color: rgb(152,14,113);font-size: 22px;font-family: Catamaran, sans-serif;">nad&nbsp;addpreviousawards</p>
-                        <p style="color: rgb(216,167,157);font-size: 18px;font-family: Catamaran, sans-serif;">nad addpreviousawards</p>
-                        <p style="color: rgb(216,167,157);font-size: 13px;font-family: Catamaran, sans-serif;">Gives everyone all the roles they would have gotten if the current role/levelling system was here all along.<br>DO NOT USE THIS IN A MAIN CHANNEL. THIS CAN PING ALOT OF PEOPLE!!! USE THIS IN A PRIVATE SPAM CHANNEL!!!</p>
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="5, 7" style="background-color: #333333;margin: 0;">
-                        <p style="color: rgb(130,150,255);font-size: 28px;font-family: Catamaran, sans-serif;">Admin Settings</p>
-                        <p style="color: rgb(152,14,113);font-size: 17px;font-family: Catamaran, sans-serif;">nad&nbsp;toggleremoveoldroleswhenlevelling</p>
-                        <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">nad toggleremoveoldroleswhenlevelling</p>
-                        <p style="color: rgb(216,167,157);font-size: 13px;font-family: Catamaran, sans-serif;">Toggles whether or not the previous roles that were gained by levelling stays when they gain a new role from levelling up. Defaults to Removing Roles on levelling</p>
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="6" style="background-color: #333333;margin: 0;">
-                        <p style="color: rgb(0,159,92);font-size: 28px;font-family: Catamaran, sans-serif;">General</p>
-                        <p style="color: rgb(152,14,113);font-size: 23px;font-family: Catamaran, sans-serif;">nad help</p>
-                        <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">nad help</p>
-                        <p style="color: rgb(216,167,157);font-size: 13px;font-family: Catamaran, sans-serif;">Shows help command</p>
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="6" style="background-color: #333333;margin: 0;">
-                        <p style="color: rgb(0,159,92);font-size: 28px;font-family: Catamaran, sans-serif;">General</p>
-                        <p style="color: rgb(152,14,113);font-size: 23px;font-family: Catamaran, sans-serif;">nad pfp @Mention</p>
-                        <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">nad pfp @User#0001</p>
-                        <p style="color: rgb(216,167,157);font-size: 13px;font-family: Catamaran, sans-serif;">Returns an enlarged version of somebody's profile picture.</p>
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="6, 5" style="background-color: #333333;margin: 0;">
-                        <p style="color: rgb(0,159,92);font-size: 28px;font-family: Catamaran, sans-serif;">General</p>
-                        <p style="color: rgb(152,14,113);font-size: 23px;font-family: Catamaran, sans-serif;">nad cust bg NAME</p>
-                        <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">nad cust bg red</p>
-                        <p style="color: rgb(216,167,157);font-size: 13px;font-family: Catamaran, sans-serif;">Customizes your background with any one of the backgrounds</p>
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="6, 5" style="background-color: #333333;margin: 0;">
-                        <p style="color: rgb(0,159,92);font-size: 28px;font-family: Catamaran, sans-serif;">General&nbsp;</p>
-                        <p style="color: rgb(152,14,113);font-size: 23px;font-family: Catamaran, sans-serif;">nad cust color NAME</p>
-                        <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">nad cust color red</p>
-                        <p style="color: rgb(216,167,157);font-size: 13px;font-family: Catamaran, sans-serif;">Customizes the rank cards color scheme.</p>
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="6, 5" style="background-color: #333333;margin: 0;">
-                        <p style="color: rgb(0,159,92);font-size: 28px;font-family: Catamaran, sans-serif;">General</p>
-                        <p style="color: rgb(152,14,113);font-size: 23px;font-family: Catamaran, sans-serif;">nad cust</p>
-                        <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">nad cust</p>
-                        <p style="color: rgb(216,167,157);font-size: 13px;font-family: Catamaran, sans-serif;">shows all custom things you have :FlexEmote:</p>
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="6, 2, 1" style="background-color: #333333;margin: 0;">
-                        <p style="color: rgb(0,159,92);font-size: 28px;font-family: Catamaran, sans-serif;">General</p>
-                        <p style="color: rgb(152,14,113);font-size: 23px;font-family: Catamaran, sans-serif;">nad rsub SUBREDDIT</p>
-                        <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">nad rsub memes</p>
-                        <p style="color: rgb(216,167,157);font-size: 13px;font-family: Catamaran, sans-serif;">tags the channel that the message is sent in to recieve posts from the subreddit specified (r/memes in this example). (Max 1 Subreddit/channel and 2 Subreddits/Guild) (Requires Mod)</p>
-                    </div>
-                    <div class="col-6 col-sm-4 col-md-3 filtr-item" data-category="6, 2, 1" style="background-color: #333333;margin: 0;">
-                        <p style="color: rgb(0,159,92);font-size: 28px;font-family: Catamaran, sans-serif;">General</p>
-                        <p style="color: rgb(152,14,113);font-size: 23px;font-family: Catamaran, sans-serif;">nad runsub</p>
-                        <p style="color: rgb(216,167,157);font-size: 16px;font-family: Catamaran, sans-serif;">nad runsub</p>
-                        <p style="color: rgb(216,167,157);font-size: 13px;font-family: Catamaran, sans-serif;">untags the channel that the message is sent in to stop recieving posts from the subreddit specified.<br>(Requires Mod)</p>
-                    </div>
-                </div>
+    <section id="download" class="download text-center bg-primary">
+        <div class="col-md-12 search-table-col">
+            <div class="form-group pull-right col-lg-4"><input type="text" class="search form-control" placeholder="Search by typing here.." style="background: rgb(35,35,35);"></div><span class="counter pull-right"></span>
+            <div class="table-responsive table-bordered table table-hover table-bordered results">
+                <table class="table table-bordered table-hover">
+                    <thead class="bill-header cs">
+                        <tr>
+                            <th id="trs-hd" class="col-lg-2" style="width: 247px;">Command Name</th>
+                            <th id="trs-hd" class="col-lg-3" style="width: 478px;">Description</th>
+                            <th id="trs-hd" class="col-lg-2" style="width: 271px;">Usage</th>
+                        </tr>
+                    </thead>
+                    <tbody id="commandList"></tbody>
+                </table>
             </div>
-        </section>
+        </div>
     </section>
     <footer>
         <div class="container">
@@ -298,6 +94,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.js"></script>
     <script src="../assets/js/Filterable-Gallery-with-Lightbox.js"></script>
     <script src="../assets/js/Animated-Typing-With-Blinking.js"></script>
+    <script src="../assets/js/commandLoader.js"></script>
     <script src="../assets/js/Data-Table-with-Search-Sort-Filter-and-Zoom-using-TableSorter.js"></script>
     <script src="../assets/js/Filterable-Gallery.js"></script>
     <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script>
@@ -308,6 +105,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/new-age.js"></script>
+    <script src="../assets/js/Table-With-Search.js"></script>
 </body>
 
 </html>
