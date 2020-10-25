@@ -7,7 +7,7 @@
   display: inline-block;
   position: relative;
   text-align: left;
-  font-size: 70px;
+  font-size: 3px;
 }
 
 .cd-words-wrapper b {
@@ -19,7 +19,7 @@
 }
 
 .blc {
-  font-size: 70px;
+  font-size: 30px;
 }
 
 .cd-words-wrapper b.is-visible {

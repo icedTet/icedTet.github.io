@@ -41,12 +41,25 @@ console.log("yas")
 httpGet(guildid).then(chans=>{
     let element = document.getElementById("commandList");
     let data = JSON.parse(chans);
+    // data.sort()d
+    data = data.filter(x=>x)
+    data = data.sort(function(a, b){
+		if(a.name < b.name) { return -1; }
+		if(a.name > b.name) { return 1; }
+		return 0;
+	});
+    let ani = document.getElementById("dazCmds")
     data.forEach(item => {
+        try{
         element.innerHTML+="<tr>\
         <td style=\"color: rgb(214,214,214);text-align: left;\">"+item.name+"</td>\
         <td style=\"color: rgb(214,214,214);text-align: left;\">"+item.description+"</td>\
         <td style=\"color: rgb(214,214,214);text-align: left;\">"+item.usage+"</td>\
     </tr>"
+        ani.innerHTML+="<b>"+item.name+"</b>"
+        }catch(er){
+            console.log(er,item)
+        }
     });
     // alert("Done!")
 
