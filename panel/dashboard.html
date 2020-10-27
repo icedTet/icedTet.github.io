@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/fonts/material-icons.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
     <link rel="stylesheet" href="assets/css/styles.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.2/css/bootstrap-slider.min.css">
 </head>
@@ -18,7 +20,7 @@
     <div id="wrapper">
         <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
             <div class="container-fluid d-flex flex-column p-0">
-                <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
+                <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="/panel">
                     <div class="sidebar-brand-icon rotate-n-15"></div><img style="width: 40px;height: 40px;" src="assets/img/303e01fe1c009274ee37521ca47d74e6.png">
                     <div class="sidebar-brand-text mx-3"><span>Dazai</span></div>
                 </a>
@@ -130,25 +132,25 @@
                         <div class="card-body">
                             <div class="row align-items-center no-gutters">
                                 <div class="col mr-2">
-                                    <div class="text-uppercase text-info font-weight-bold text-xs mb-1"><span>server activity</span></div>
+                                    <div class="text-uppercase text-info font-weight-bold text-xs mb-1"><span>Boost Level</span></div>
                                     <div class="row no-gutters align-items-center">
                                         <div class="col-auto">
                                             <div class="text-dark font-weight-bold h5 mb-0 mr-3"><span>50%</span></div>
                                         </div>
                                         <div class="col">
                                             <div class="progress progress-sm">
-                                                <div class="progress-bar bg-info" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;"><span class="sr-only">50%</span></div>
+                                                <div class="progress-bar bg-info" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" style="width: 1%;"><span class="sr-only">1%</span></div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-auto"><i class="fas fa-clipboard-list fa-2x text-gray-300"></i></div>
+                                <div class="col-auto"><i class="fas fa-star fa-2x text-gray-300"></i></div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-xl-3 mb-4">
-                    <a id="allchanlink" href="#">
+                    <a id="allchanlink" href="/panel/channels/?guild=">
                         <div class="card shadow border-left-warning py-2">
                             <div class="card-body">
                                 <div class="row align-items-center no-gutters">
@@ -181,16 +183,14 @@
                 <div class="col-lg-5 col-xl-4">
                     <div class="card shadow mb-4">
                         <div class="card-header d-flex justify-content-between align-items-center">
-                            <h6 class="text-primary font-weight-bold m-0">Revenue Sources</h6>
+                            <h6 class="text-primary font-weight-bold m-0">Boosters</h6>
                             <div class="dropdown no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"><i class="fas fa-ellipsis-v text-gray-400"></i></button>
                                 <div class="dropdown-menu shadow dropdown-menu-right animated--fade-in">
                                     <p class="text-center dropdown-header">dropdown header:</p><a class="dropdown-item" href="#">&nbsp;Action</a><a class="dropdown-item" href="#">&nbsp;Another action</a>
                                     <div class="dropdown-divider"></div><a class="dropdown-item" href="#">&nbsp;Something else here</a></div>
                             </div>
                         </div>
-                        <div class="card-body">
-                            <div class="text-center small mt-4"><span class="mr-2"><i class="fas fa-circle text-primary"></i>&nbsp;Direct</span><span class="mr-2"><i class="fas fa-circle text-success"></i>&nbsp;Social</span><span class="mr-2"><i class="fas fa-circle text-info"></i>&nbsp;Refferal</span></div>
-                        </div>
+                        <div class="card-body"></div>
                     </div>
                 </div>
             </div>
@@ -224,95 +224,152 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h6 class="text-primary font-weight-bold m-0">Todo List</h6>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">
-                                <div class="row align-items-center no-gutters">
-                                    <div class="col mr-2">
-                                        <h6 class="mb-0"><strong>Lunch meeting</strong></h6><span class="text-xs">10:30 AM</span></div>
-                                    <div class="col-auto">
-                                        <div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" id="formCheck-1"><label class="custom-control-label" for="formCheck-1"></label></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="row align-items-center no-gutters">
-                                    <div class="col mr-2">
-                                        <h6 class="mb-0"><strong>Lunch meeting</strong></h6><span class="text-xs">11:30 AM</span></div>
-                                    <div class="col-auto">
-                                        <div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" id="formCheck-2"><label class="custom-control-label" for="formCheck-2"></label></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="row align-items-center no-gutters">
-                                    <div class="col mr-2">
-                                        <h6 class="mb-0"><strong>Lunch meeting</strong></h6><span class="text-xs">12:30 AM</span></div>
-                                    <div class="col-auto">
-                                        <div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" id="formCheck-3"><label class="custom-control-label" for="formCheck-3"></label></div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
                 <div class="col">
-                    <div class="row">
-                        <div class="col-lg-6 mb-4">
-                            <div class="card text-white bg-primary shadow">
-                                <div class="card-body">
-                                    <p class="m-0">Primary</p>
-                                    <p class="text-white-50 small m-0">#4e73df</p>
-                                </div>
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="text-primary font-weight-bold m-0">Messages<span style="text-align: center;padding-left: 151px;"></span></h6>
+                        </div>
+                        <div class="card-body">
+                            <div>
+                                <!-- Start: textarea -->
+                                <form>
+                                    <div class="field"><textarea class="form-control" id="onJoinMsg" name="float-textarea" style="border: 0;border-bottom: 0px solid #E0E0E0;" placeholder=" "></textarea>
+                                        <!-- Start: Inline Dropdown --><form class="form-inline">
+  <div class="form-group">
+      When new user joins, In &nbsp;
+     <select  class="form-control" id="joinMSGChannel">
+<!--          <label>e</label> -->
+<!--          <option>Option</option> -->
+      </select>
+      &nbsp; Say:
+  </div>
+</form>
+                                        <!-- End: Inline Dropdown -->
+                                    </div>
+                                </form>
+                                <!-- End: textarea -->
+                            </div>
+                            <div>
+                                <!-- Start: textarea -->
+                                <form>
+                                    <div class="field"><textarea class="form-control" id="onJoinMsgDM" name="float-textarea" style="border: 0;border-bottom: 0px solid #E0E0E0;" placeholder=" "></textarea>
+                                        <!-- Start: Inline Dropdown --><form class="form-inline">
+  <div class="form-group">
+      When new user joins, Send them a DM Saying:
+  </div>
+</form>
+                                        <!-- End: Inline Dropdown -->
+                                    </div>
+                                </form>
+                                <!-- End: textarea -->
+                            </div>
+                            <div>
+                                <!-- Start: textarea -->
+                                <form>
+                                    <div class="field"><textarea class="form-control" id="onLeaveMsg" name="float-textarea" style="border: 0;border-bottom: 0px solid #E0E0E0;" placeholder=" "></textarea>
+                                        <!-- Start: Inline Dropdown --><form class="form-inline">
+  <div class="form-group">
+      When user leaves, In &nbsp;
+     <select  class="form-control"id="leaveMSGChannel"> >
+<!--          <label>e</label> -->
+<!--          <option>Option</option> -->
+      </select>
+      &nbsp; Say:
+  </div>
+</form>
+                                        <!-- End: Inline Dropdown -->
+                                    </div>
+                                </form>
+                                <!-- End: textarea -->
+                            </div>
+                            <div>
+                                <!-- Start: textarea -->
+                                <form>
+                                    <div class="field"><textarea class="form-control" id="onLeaveMsg-1" name="float-textarea" style="border: 0;border-bottom: 0px solid #E0E0E0;" placeholder=" "></textarea>
+                                        <!-- Start: Inline Dropdown --><form class="form-inline">
+  <div class="form-group">
+      When user levels up, In &nbsp;
+     <select  class="form-control"id="leaveMSGChannel"> >
+<!--          <label>e</label> -->
+<!--          <option>Option</option> -->
+      </select>
+      &nbsp; Say:
+  </div>
+</form>
+                                        <!-- End: Inline Dropdown -->
+                                    </div>
+                                </form>
+                                <!-- End: textarea -->
                             </div>
                         </div>
-                        <div class="col-lg-6 mb-4">
-                            <div class="card text-white bg-success shadow">
-                                <div class="card-body">
-                                    <p class="m-0">Success</p>
-                                    <p class="text-white-50 small m-0">#1cc88a</p>
+                        <div style="text-align: right;margin-right: 31px;margin-bottom: 30px;"><button class="btn btn-primary" type="button">Save</button>
+                            <!-- Start: Modal commerce popup button -->
+                            <div class="text-center" style="height: 41px;">
+                                <!-- Start: Trigger Part Start --><a class="bs4_modal_trigger" href="#" data-modal-id="bs4_sngl_cmrce" data-toggle="modal" style="margin: 0;">All Placeholders</a>
+                                <!-- End: Trigger Part Start -->
+                                <!-- Start: Modal Part Start -->
+                                <div id="bs4_sngl_cmrce" class="modal fade bs4_modal bs4_blue bs4_bg_white bs4_bd_black bs4_bd_semi_trnsp bs4_none_radius bs4_shadow_none bs4_center bs4_animate bs4FadeInDown bs4_duration_md bs4_easeOutQuint bs4_size_sngl_cmrce"
+                                    role="dialog" data-modal-backdrop="true" data-show-on="click" data-modal-delay="false" data-modal-duration="false">
+                                    <!-- Start: Modal Dialog -->
+                                    <div class="modal-dialog">
+                                        <!-- Start: Modal content -->
+                                        <div class="modal-content">
+                                            <!-- Start: Close Button --><a class="bs4_btn_x_out_shtr bs4_sngl_cmrce_close" href="#" data-dismiss="modal">close</a>
+                                            <!-- End: Close Button -->
+                                            <!-- Start: Row -->
+                                            <div class="row">
+                                                <!-- Start: Image Box -->
+                                                <div class="col-12 col-md-5">
+                                                    <div class="bs4_sngl_cmrce_img"><img src="assets/img/bs4_single_commerce_01.png" alt="bs4_single_commerce_01"></div>
+                                                </div>
+                                                <!-- End: Image Box -->
+                                                <!-- Start: Description Box -->
+                                                <div class="col-12 col-md-7" style="padding-bottom: 30px;">
+                                                    <!-- Start: Content -->
+                                                    <div class="bs4_sngl_cmrce_txt">
+                                                        <!-- Start: Name -->
+                                                        <h1>name of product, company plus modal number</h1>
+                                                        <!-- End: Name -->
+                                                        <ul>
+                                                            <li><i class="fa fa-star rate-star"></i></li>
+                                                            <li><i class="fa fa-star rate-star"></i></li>
+                                                            <li><i class="fa fa-star rate-star"></i></li>
+                                                            <li><i class="fa fa-star rate-star"></i></li>
+                                                            <li><i class="fa fa-star-half-full rate-star"></i></li>
+                                                        </ul>
+                                                        <!-- Start: Price -->
+                                                        <h2>130.00</h2>
+                                                        <!-- End: Price -->
+                                                        <!-- Start: Detail -->
+                                                        <p class="text-left" style="padding-top: 15px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam nibh. Nunc varius facilisis eros. Sed erat. In in velit quis arcu ornare laoreet. Curabitur adipiscing luctus massa.</p>
+                                                        <!-- End: Detail -->
+                                                        <form class="d-xl-flex" action="#" style="padding-top: 15px;">
+                                                            <div class="bs4_form_num" style="padding-top: 15px;"><label>quantity</label><input class="form-control" type="number" min="1" max="20"></div>
+                                                            <div class="bs4_form_color" style="padding-top: 15px;"><label>colours</label><select class="form-control form-control-sm"><optgroup label="Pick a color"><option value="12" selected="">red</option><option value="13">green</option><option value="14">blue</option></optgroup></select></div>
+                                                            <div
+                                                                class="bs4_form_size&quot;" style="margin-left: 15px;margin-top: 15px;"><label>Pick your size</label><select class="form-control" name="size" style="max-width: 128px;"><optgroup label="Select size"><option value="12" selected="">10</option><option value="13">12</option><option value="14">14</option></optgroup></select></div>
+                                                    </form>
+                                                </div>
+                                                <!-- End: Content -->
+                                                <div class="bs4_form_cmrce_btn" style="padding-left: 20px;"><button class="btn btn-primary d-flex justify-content-start bs4_btn_x_out_shtr" type="submit">ADD TO CART</button></div>
+                                            </div>
+                                            <!-- End: Description Box -->
+                                        </div>
+                                        <!-- End: Row -->
+                                    </div>
+                                    <!-- End: Modal content -->
                                 </div>
+                                <!-- End: Modal Dialog -->
                             </div>
+                            <!-- End: Modal Part Start -->
                         </div>
-                        <div class="col-lg-6 mb-4">
-                            <div class="card text-white bg-info shadow">
-                                <div class="card-body">
-                                    <p class="m-0">Info</p>
-                                    <p class="text-white-50 small m-0">#36b9cc</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 mb-4">
-                            <div class="card text-white bg-warning shadow">
-                                <div class="card-body">
-                                    <p class="m-0">Warning</p>
-                                    <p class="text-white-50 small m-0">#f6c23e</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 mb-4">
-                            <div class="card text-white bg-danger shadow">
-                                <div class="card-body">
-                                    <p class="m-0">Danger</p>
-                                    <p class="text-white-50 small m-0">#e74a3b</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 mb-4">
-                            <div class="card text-white bg-secondary shadow">
-                                <div class="card-body">
-                                    <p class="m-0">Secondary</p>
-                                    <p class="text-white-50 small m-0">#858796</p>
-                                </div>
-                            </div>
-                        </div>
+                        <!-- End: Modal commerce popup button -->
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <footer class="bg-white sticky-footer">
         <div class="container my-auto">
