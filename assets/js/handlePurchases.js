@@ -155,7 +155,7 @@ async function yes() {
           let currentdate = new Date();
           let newDate = new Date();
           newDate.setMinutes(59)
-          newDate.setHours(59)
+          newDate.setHours(23)
           newDate.setSeconds(59)
           newDate.setMilliseconds(999)
           currentdate = new Date();
