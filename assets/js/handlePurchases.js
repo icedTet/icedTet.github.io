@@ -104,8 +104,30 @@ function login(token) {
         Http.send(JSON.stringify(token));
     })
 }
- function buyItem(itemID){
 
+ function buyItem(itemID){
+    const Http = new XMLHttpRequest();
+    const url = 'https://api.dazai.app:8080/api/buy-item';
+    Http.open("POST", url);
+
+    var access_token = "5938ea"
+    // Http.setRequestHeader('Authorization', 'Bearer ' + access_token);
+    Http.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    Http.onreadystatechange = (e) => {
+        //   console.log(Http.responseText)
+        if (Http.readyState == 4 || Http.readyState == "complete") {
+            let pdata = JSON.parse(Http.responseText)
+            alert(pdata.reason);
+            if (pdata.pass){
+                window.location.replace("http://dazai.app/self/");
+            }
+        }
+    }
+    // console.log(token);
+    Http.send(JSON.stringify({
+        code: JSON.parse(localStorage.getItem("DazaiAPIData")).authToken,
+        item: itemID
+    }));
 }
 async function yes() {
     var guildid = getUrlVars("code")
@@ -176,7 +198,7 @@ async function yes() {
             <h4 class=\"card-title\" style=\"font-size: 24px;color: rgb("+item.color[0]+","+item.color[1]+","+item.color[2]+")\">"+ item.name + "</h4>\
             <p style=\"font-size: 14px;color: rgb("+item.color[0]+","+item.color[1]+","+item.color[2]+")\">"+item.rarity.toUpperCase().replace(/\_/g," ")+"</P>\
             <h4 class=\"card-title\" style=\"font-size: 16px;color: "+ (balinfo >= item.price ? "rgb(213,216,252)" : "rgb(213,50,50)") + ";\">" + item.price + " DC</h4>\
-            <p class=\"card-text\">"+ item.lore + "</p>" + (balinfo >= item.price ? "<button class=\"btn\" type=\"button\" onclick=\"\" style=\"margin-top: 10px;\">Buy Now</button>" : "") + "</div>\
+            <p class=\"card-text\">"+ item.lore + "</p>" + (balinfo >= item.price ? "<button class=\"btn\" type=\"button\" onclick=\"buyItem(\'"+item.idName+"\')\" style=\"margin-top: 10px;\">Buy Now</button>" : "") + "</div>\
     </div>";
         });
 
