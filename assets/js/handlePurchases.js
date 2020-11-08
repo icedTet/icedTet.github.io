@@ -106,7 +106,7 @@ function login(token) {
 }
 async function yes() {
     var guildid = getUrlVars("code")
-    // console.log("")
+    // console.log(guildid["code"])
     if (!localStorage.getItem("DazaiAPIData") && guildid && !guildid["code"]) {
         window.location.replace("https://discord.com/api/oauth2/authorize?client_id=747901310749245561&redirect_uri=https%3A%2F%2Fdazai.app%2Fself%2F&response_type=code&scope=identify")
         return;
@@ -122,8 +122,8 @@ async function yes() {
 
         // console.log()
         const guilds = JSON.parse(chans)
-        let balinfo = chans.bal.coins;
-        let offers = chans.offers
+        let balinfo = guilds.bal.coins;
+        let offers = guilds.offers
         document.getElementById("coinCount").innerHTML = "You have <strong>" + balinfo + " DC</strong>"
         let group1 = document.getElementById("group1")
         let group2 = document.getElementById("group2")
