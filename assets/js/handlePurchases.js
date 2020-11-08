@@ -146,7 +146,11 @@ async function yes() {
                 seconds = "0" + seconds;
             }
             if (!seconds && !minutes && !hours){
-                window.location.reload(true);
+                setTimeout(() => {
+                    window.location.reload(true);
+                }, 4000);
+                
+                
             }
             return hours + " Hour(s) " + minutes + " Minute(s) and " + seconds + " Second(s)";
         }
@@ -169,7 +173,8 @@ async function yes() {
             let addGroup = (index % 3 == 0 ? group1 : (index % 3 == 1 ? group2 : group3))
             addGroup.innerHTML += "<div class=\"card\" data-aos=\"zoom-in\"><img class=\"card-img-top w-100 d-block\" src=\"" + item.fullImg + "\" />\
         <div class=\"card-body\">\
-            <h4 class=\"card-title\" style=\"font-size: 24px;\">"+ item.name + "</h4>\
+            <h4 class=\"card-title\" style=\"font-size: 24px;color: rgb("+item.color[0]+","+item.color[1]+","+item.color[2]+")\">"+ item.name + "</h4>\
+            <p style=\"font-size: 16px;color: "+ (balinfo >= item.price ? "rgb(213,216,252)" : "rgb(213,50,50)") + ";\">"+item.rarity.toUpperCase()+"</P>\
             <h4 class=\"card-title\" style=\"font-size: 16px;color: "+ (balinfo >= item.price ? "rgb(213,216,252)" : "rgb(213,50,50)") + ";\">" + item.price + " DC</h4>\
             <p class=\"card-text\">"+ item.lore + "</p>" + (balinfo >= item.price ? "<button class=\"btn\" type=\"button\" onclick=\"\" style=\"margin-top: 10px;\">Buy Now</button>" : "") + "</div>\
     </div>";
