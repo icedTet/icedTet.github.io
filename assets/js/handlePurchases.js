@@ -114,7 +114,7 @@ async function yes() {
     if (guildid){
         let resData = await login(guildid);
         localStorage.removeItem("DazaiAPIData");
-        localStorage.setItem("DazaiAPIData",chans)
+        localStorage.setItem("DazaiAPIData",resData)
         // window.location.replace("http://dazai.app/self/");
         // return;
     }
