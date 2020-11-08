@@ -104,6 +104,9 @@ function login(token) {
         Http.send(JSON.stringify(token));
     })
 }
+ function buyItem(itemID){
+
+}
 async function yes() {
     var guildid = getUrlVars("code")
     // console.log(guildid["code"])
@@ -125,7 +128,40 @@ async function yes() {
         const guilds = JSON.parse(chans)
         let balinfo = guilds.bal.coins;
         let offers = guilds.offers
-        document.getElementById("coinCount").innerHTML = "You have <strong>" + balinfo + " DC</strong>"
+        let base = "You have "+balinfo+" DC 》Offers Reset in "
+
+        function SecsToFormat2(string) {
+            var sec_num = parseInt(string, 10);
+            var hours = Math.floor(sec_num / 3600);
+            var minutes = Math.floor((sec_num - hours * 3600) / 60);
+            var seconds = sec_num - hours * 3600 - minutes * 60;
+        
+            if (hours < 10) {
+                hours = "0" + hours;
+            }
+            if (minutes < 10) {
+                minutes = "0" + minutes;
+            }
+            if (seconds < 10) {
+                seconds = "0" + seconds;
+            }
+            if (!seconds && !minutes && !hours){
+                window.location.reload(true);
+            }
+            return hours + " Hour(s) " + minutes + " Minute(s) and " + seconds + " Second(s)";
+        }
+        
+        setInterval(()=>{
+          let currentdate = new Date();
+          let newDate = new Date();
+          newDate.setMinutes(59)
+          newDate.setHours(59)
+          newDate.setSeconds(59)
+          newDate.setMilliseconds(999)
+          currentdate = new Date();
+          document.getElementById("coinCount").innerHTML = base + SecsToFormat2((newDate.getTime()-currentdate.getTime())/1000)
+          
+        },1000)
         let group1 = document.getElementById("group1")
         let group2 = document.getElementById("group2")
         let group3 = document.getElementById("group-3")
@@ -135,7 +171,7 @@ async function yes() {
         <div class=\"card-body\">\
             <h4 class=\"card-title\" style=\"font-size: 24px;\">"+ item.name + "</h4>\
             <h4 class=\"card-title\" style=\"font-size: 16px;color: "+ (balinfo >= item.price ? "rgb(213,216,252)" : "rgb(213,50,50)") + ";\">" + item.price + " DC</h4>\
-            <p class=\"card-text\">"+ item.lore + "</p>" + (balinfo >= item.price ? "<button class=\"btn\" type=\"button\" onclick=\"\">Buy Now</button>" : "") + "</div>\
+            <p class=\"card-text\">"+ item.lore + "</p>" + (balinfo >= item.price ? "<button class=\"btn\" type=\"button\" onclick=\"\" style=\"margin-top: 10px;\">Buy Now</button>" : "") + "</div>\
     </div>";
         });
 
