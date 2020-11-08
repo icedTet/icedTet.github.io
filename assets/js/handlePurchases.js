@@ -168,9 +168,9 @@ async function yes() {
         },1000)
         let group1 = document.getElementById("group1")
         let group2 = document.getElementById("group2")
-        let group3 = document.getElementById("group-3")
+        // let group3 = document.getElementById("group-3")
         offers.forEach((item, index) => {
-            let addGroup = (index % 3 == 0 ? group1 : (index % 3 == 1 ? group2 : group3))
+            let addGroup = (index % 2 == 0 ? group1 : (index % 2 == 1 ? group2 : group3))
             addGroup.innerHTML += "<div class=\"card\" data-aos=\"zoom-in\"><img class=\"card-img-top w-100 d-block\" src=\"" + item.fullImg + "\" />\
         <div class=\"card-body\">\
             <h4 class=\"card-title\" style=\"font-size: 24px;color: rgb("+item.color[0]+","+item.color[1]+","+item.color[2]+")\">"+ item.name + "</h4>\
