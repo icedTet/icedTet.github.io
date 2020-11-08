@@ -86,7 +86,7 @@ function login(token) {
         // } catch (error) {
         //     // alert(error)
         // }
-
+        token.url = "https://dazai.app/self/"
         const Http = new XMLHttpRequest();
         const url = 'https://api.dazai.app:8080/api/login';
         Http.open("POST", url);
