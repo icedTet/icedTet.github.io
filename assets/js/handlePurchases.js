@@ -115,6 +115,7 @@ async function yes() {
         let resData = await login(guildid);
         localStorage.removeItem("DazaiAPIData");
         localStorage.setItem("DazaiAPIData",resData)
+        
         // window.location.replace("http://dazai.app/self/");
         // return;
     }
@@ -130,7 +131,7 @@ async function yes() {
         let group3 = document.getElementById("group-3")
         offers.forEach((item, index) => {
             let addGroup = (index % 3 == 0 ? group1 : (index % 3 == 1 ? group2 : group3))
-            addGroup.innerHTML += "<div class=\"card\"><img class=\"card-img-top w-100 d-block\" src=\"" + item.fullImg + "\" />\
+            addGroup.innerHTML += "<div class=\"card\" data-aos=\"zoom-in\"><img class=\"card-img-top w-100 d-block\" src=\"" + item.fullImg + "\" />\
         <div class=\"card-body\">\
             <h4 class=\"card-title\" style=\"font-size: 24px;\">"+ item.name + "</h4>\
             <h4 class=\"card-title\" style=\"font-size: 16px;color: "+ (balinfo >= item.price ? "rgb(213,216,252)" : "rgb(213,50,50)") + ";\">" + item.price + " DC</h4>\
