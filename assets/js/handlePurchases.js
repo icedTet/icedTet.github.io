@@ -111,7 +111,7 @@ async function yes() {
         window.location.replace("https://discord.com/api/oauth2/authorize?client_id=747901310749245561&redirect_uri=https%3A%2F%2Fdazai.app%2Fself%2F&response_type=code&scope=identify")
         return;
     }
-    if (guildid){
+    if (guildid && guildid.code){
         let resData = await login(guildid);
         localStorage.removeItem("DazaiAPIData");
         localStorage.setItem("DazaiAPIData",resData)
