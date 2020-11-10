@@ -23,15 +23,6 @@ function httpGet(theUrl) {
     // console.log(xmlHttp.statusText)
 
     return new Promise(function (res, rej) {
-        try {
-            if (localStorage.getItem("dazaiCommandsCached") && JSON.parse(localStorage.getItem("dazaiCommandsCached")).expires > (new Date()).getTime()) {
-                console.log("Using Results cache")
-                res(JSON.parse(localStorage.getItem("dazaiCommandsCached")).responseText);
-                return localStorage.getItem("dazaiCommandsCached").responseText;
-            }
-        } catch (er) {
-            alert("Warning, Brower Cache read request denied. Please grant access to the browser cache or some features like the Dazai Panel will not work!")
-        }
         const Http = new XMLHttpRequest();
         const url = 'https://api.dazai.app:8080/api/botstats';
         Http.open("GET", url);
