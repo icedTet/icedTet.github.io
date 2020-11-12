@@ -9,9 +9,6 @@
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/fonts/material-icons.min.css">
-    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
     <link rel="stylesheet" href="assets/css/styles.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.2/css/bootstrap-slider.min.css">
 </head>
@@ -102,32 +99,6 @@
             </div>
             <div class="row">
                 <div class="col-md-6 col-xl-3 mb-4">
-                    <div class="card shadow border-left-primary py-2">
-                        <div class="card-body">
-                            <div class="row align-items-center no-gutters">
-                                <div class="col mr-2">
-                                    <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>Messages</span></div>
-                                    <div class="text-dark font-weight-bold h5 mb-0"><span>69420</span></div>
-                                </div>
-                                <div class="col-auto"><i class="material-icons fa-2x text-gray-300">message</i></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xl-3 mb-4">
-                    <div class="card shadow border-left-success py-2">
-                        <div class="card-body">
-                            <div class="row align-items-center no-gutters">
-                                <div class="col mr-2">
-                                    <div class="text-uppercase text-success font-weight-bold text-xs mb-1"><span>Simping</span></div>
-                                    <div class="text-dark font-weight-bold h5 mb-0"><span>100%</span></div>
-                                </div>
-                                <div class="col-auto"><i class="fas fa-dollar-sign fa-2x text-gray-300"></i></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xl-3 mb-4">
                     <div class="card shadow border-left-info py-2">
                         <div class="card-body">
                             <div class="row align-items-center no-gutters">
@@ -135,7 +106,7 @@
                                     <div class="text-uppercase text-info font-weight-bold text-xs mb-1"><span>Boost Level</span></div>
                                     <div class="row no-gutters align-items-center">
                                         <div class="col-auto">
-                                            <div class="text-dark font-weight-bold h5 mb-0 mr-3"><span>50%</span></div>
+                                            <div class="text-dark font-weight-bold h5 mb-0 mr-3"><span>99</span></div>
                                         </div>
                                         <div class="col">
                                             <div class="progress progress-sm">
@@ -203,32 +174,13 @@
                         </div>
                         <div class="card-body">
                             <h4 class="small font-weight-bold">Server migration<span class="float-right">20%</span></h4>
-                            <div class="progress mb-4">
-                                <div class="progress-bar bg-danger" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;"><span class="sr-only">20%</span></div>
-                            </div>
-                            <h4 class="small font-weight-bold">Sales tracking<span class="float-right">40%</span></h4>
-                            <div class="progress mb-4">
-                                <div class="progress-bar bg-warning" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"><span class="sr-only">40%</span></div>
-                            </div>
-                            <h4 class="small font-weight-bold">Customer Database<span class="float-right">60%</span></h4>
-                            <div class="progress mb-4">
-                                <div class="progress-bar bg-primary" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><span class="sr-only">60%</span></div>
-                            </div>
-                            <h4 class="small font-weight-bold">Payout Details<span class="float-right">80%</span></h4>
-                            <div class="progress mb-4">
-                                <div class="progress-bar bg-info" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"><span class="sr-only">80%</span></div>
-                            </div>
-                            <h4 class="small font-weight-bold">Account setup<span class="float-right">Complete!</span></h4>
-                            <div class="progress mb-4">
-                                <div class="progress-bar bg-success" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"><span class="sr-only">100%</span></div>
-                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="text-primary font-weight-bold m-0">Messages<span style="text-align: center;padding-left: 151px;"></span></h6>
+                            <h6 class="text-primary font-weight-bold m-0">Messages</h6>
                         </div>
                         <div class="card-body">
                             <div>
@@ -237,12 +189,11 @@
                                     <div class="field"><textarea class="form-control" id="onJoinMsg" name="float-textarea" style="border: 0;border-bottom: 0px solid #E0E0E0;" placeholder=" "></textarea>
                                         <!-- Start: Inline Dropdown --><form class="form-inline">
   <div class="form-group">
-      When new user joins, In &nbsp;
+      When new user joins, say the following in &nbsp;
      <select  class="form-control" id="joinMSGChannel">
 <!--          <label>e</label> -->
 <!--          <option>Option</option> -->
       </select>
-      &nbsp; Say:
   </div>
 </form>
                                         <!-- End: Inline Dropdown -->
@@ -270,12 +221,11 @@
                                     <div class="field"><textarea class="form-control" id="onLeaveMsg" name="float-textarea" style="border: 0;border-bottom: 0px solid #E0E0E0;" placeholder=" "></textarea>
                                         <!-- Start: Inline Dropdown --><form class="form-inline">
   <div class="form-group">
-      When user leaves, In &nbsp;
+      When user leaves, say the following in &nbsp;
      <select  class="form-control"id="leaveMSGChannel"> >
 <!--          <label>e</label> -->
 <!--          <option>Option</option> -->
       </select>
-      &nbsp; Say:
   </div>
 </form>
                                         <!-- End: Inline Dropdown -->
@@ -286,15 +236,14 @@
                             <div>
                                 <!-- Start: textarea -->
                                 <form>
-                                    <div class="field"><textarea class="form-control" id="onLeaveMsg-1" name="float-textarea" style="border: 0;border-bottom: 0px solid #E0E0E0;" placeholder=" "></textarea>
+                                    <div class="field"><textarea class="form-control" id="onLvlUp" name="float-textarea" style="border: 0;border-bottom: 0px solid #E0E0E0;" placeholder="Congrats {MENTION}! You have levelled up **{OLDLVL} → {NEWLVL}**"></textarea>
                                         <!-- Start: Inline Dropdown --><form class="form-inline">
   <div class="form-group">
-      When user levels up, In &nbsp;
-     <select  class="form-control"id="leaveMSGChannel"> >
+      When user levels up, say the following in &nbsp;
+     <select class="form-control"id="lvlUpMSGChannel"> >
 <!--          <label>e</label> -->
 <!--          <option>Option</option> -->
       </select>
-      &nbsp; Say:
   </div>
 </form>
                                         <!-- End: Inline Dropdown -->
@@ -302,74 +251,15 @@
                                 </form>
                                 <!-- End: textarea -->
                             </div>
+                            <p>All Placeholders<br>{USERNAME} = User's Username<br>{MENTION} = Mention the user.<br>{ID} = The user id<br>Level Up only placeholders:<br>{OLDLVL} = Previous Level<br>{NEWLVL}&nbsp; = Level User Just Got to.<br>By setting the
+                                channel to 'none' or by leaving the box blank, you basically disable the message. However, Level Up is a special case with this. Setting channel to 'none' for Level Up will just display the message in the channel where
+                                the user last typed. To cancel the Level Up message, set the content to&nbsp;<code>none</code>.&nbsp;</p>
                         </div>
-                        <div style="text-align: right;margin-right: 31px;margin-bottom: 30px;"><button class="btn btn-primary" type="button">Save</button>
-                            <!-- Start: Modal commerce popup button -->
-                            <div class="text-center" style="height: 41px;">
-                                <!-- Start: Trigger Part Start --><a class="bs4_modal_trigger" href="#" data-modal-id="bs4_sngl_cmrce" data-toggle="modal" style="margin: 0;">All Placeholders</a>
-                                <!-- End: Trigger Part Start -->
-                                <!-- Start: Modal Part Start -->
-                                <div id="bs4_sngl_cmrce" class="modal fade bs4_modal bs4_blue bs4_bg_white bs4_bd_black bs4_bd_semi_trnsp bs4_none_radius bs4_shadow_none bs4_center bs4_animate bs4FadeInDown bs4_duration_md bs4_easeOutQuint bs4_size_sngl_cmrce"
-                                    role="dialog" data-modal-backdrop="true" data-show-on="click" data-modal-delay="false" data-modal-duration="false">
-                                    <!-- Start: Modal Dialog -->
-                                    <div class="modal-dialog">
-                                        <!-- Start: Modal content -->
-                                        <div class="modal-content">
-                                            <!-- Start: Close Button --><a class="bs4_btn_x_out_shtr bs4_sngl_cmrce_close" href="#" data-dismiss="modal">close</a>
-                                            <!-- End: Close Button -->
-                                            <!-- Start: Row -->
-                                            <div class="row">
-                                                <!-- Start: Image Box -->
-                                                <div class="col-12 col-md-5">
-                                                    <div class="bs4_sngl_cmrce_img"><img src="assets/img/bs4_single_commerce_01.png" alt="bs4_single_commerce_01"></div>
-                                                </div>
-                                                <!-- End: Image Box -->
-                                                <!-- Start: Description Box -->
-                                                <div class="col-12 col-md-7" style="padding-bottom: 30px;">
-                                                    <!-- Start: Content -->
-                                                    <div class="bs4_sngl_cmrce_txt">
-                                                        <!-- Start: Name -->
-                                                        <h1>name of product, company plus modal number</h1>
-                                                        <!-- End: Name -->
-                                                        <ul>
-                                                            <li><i class="fa fa-star rate-star"></i></li>
-                                                            <li><i class="fa fa-star rate-star"></i></li>
-                                                            <li><i class="fa fa-star rate-star"></i></li>
-                                                            <li><i class="fa fa-star rate-star"></i></li>
-                                                            <li><i class="fa fa-star-half-full rate-star"></i></li>
-                                                        </ul>
-                                                        <!-- Start: Price -->
-                                                        <h2>130.00</h2>
-                                                        <!-- End: Price -->
-                                                        <!-- Start: Detail -->
-                                                        <p class="text-left" style="padding-top: 15px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam nibh. Nunc varius facilisis eros. Sed erat. In in velit quis arcu ornare laoreet. Curabitur adipiscing luctus massa.</p>
-                                                        <!-- End: Detail -->
-                                                        <form class="d-xl-flex" action="#" style="padding-top: 15px;">
-                                                            <div class="bs4_form_num" style="padding-top: 15px;"><label>quantity</label><input class="form-control" type="number" min="1" max="20"></div>
-                                                            <div class="bs4_form_color" style="padding-top: 15px;"><label>colours</label><select class="form-control form-control-sm"><optgroup label="Pick a color"><option value="12" selected="">red</option><option value="13">green</option><option value="14">blue</option></optgroup></select></div>
-                                                            <div
-                                                                class="bs4_form_size&quot;" style="margin-left: 15px;margin-top: 15px;"><label>Pick your size</label><select class="form-control" name="size" style="max-width: 128px;"><optgroup label="Select size"><option value="12" selected="">10</option><option value="13">12</option><option value="14">14</option></optgroup></select></div>
-                                                    </form>
-                                                </div>
-                                                <!-- End: Content -->
-                                                <div class="bs4_form_cmrce_btn" style="padding-left: 20px;"><button class="btn btn-primary d-flex justify-content-start bs4_btn_x_out_shtr" type="submit">ADD TO CART</button></div>
-                                            </div>
-                                            <!-- End: Description Box -->
-                                        </div>
-                                        <!-- End: Row -->
-                                    </div>
-                                    <!-- End: Modal content -->
-                                </div>
-                                <!-- End: Modal Dialog -->
-                            </div>
-                            <!-- End: Modal Part Start -->
-                        </div>
-                        <!-- End: Modal commerce popup button -->
+                        <div><button class="btn btn-primary" type="button" style="margin-left: 25px;margin-bottom: 25px;">Save</button></div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
     <footer class="bg-white sticky-footer">
         <div class="container my-auto">

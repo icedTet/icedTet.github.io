@@ -9,9 +9,6 @@
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
     <link rel="stylesheet" href="../assets/fonts/fontawesome-all.min.css">
-    <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="../assets/fonts/material-icons.min.css">
-    <link rel="stylesheet" href="../assets/fonts/fontawesome5-overrides.min.css">
     <link rel="stylesheet" href="../assets/css/styles.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.2/css/bootstrap-slider.min.css">
 </head>
@@ -218,47 +215,51 @@
 </form>
                             <!-- End: Inline Dropdown -->
                             <h1 style="font-size: 22px;margin-top: 20px;">Don't Check For</h1>
-                            <div class="form-check" style="margin-top: 3px;"><input class="form-check-input" type="checkbox" id="nsfw" style="margin-top: 3px;"><label class="form-check-label" for="nsfw" style="margin-top: 2px;">NSFW</label></div>
-                            <div class="form-check" style="margin-top: 2px;"><input class="form-check-input" type="checkbox" id="toxicity" style="margin-top: 2px;"><label class="form-check-label" for="toxicity" style="margin-top: 2px;">Toxicity</label></div>
-                            <div class="form-check" style="margin-top: 2px;"><input class="form-check-input" type="checkbox" id="homophobia" style="margin-top: 2px;"><label class="form-check-label" for="homophobia" style="margin-top: 2px;">Homophobia</label></div>
-                            <div class="form-check" style="margin-top: 2px;"><input class="form-check-input" type="checkbox" id="advert" style="margin-top: 2px;"><label class="form-check-label" for="advert" style="margin-top: 2px;">Adverts</label></div>
-                            <div class="form-check" style="margin-top: 2px;"><input class="form-check-input" type="checkbox" id="racism" style="margin-top: 2px;"><label class="form-check-label" for="racism" style="margin-top: 2px;">Racism</label></div>
-                            <h1 style="font-size: 22px;margin-top: 20px;">DazAI On?</h1>
-                            <!-- Start: Switch With Label -->
-                            <div class="form-check custom-control custom-switch"><input class="form-check-input custom-control-input" type="checkbox" id="dazaiOn" onchange="doalert(this,&#39;dazaiOnControl&#39;,&#39;On|Off&#39;)"><label class="form-check-label custom-control-label" id="dazaiOnControl" for="dazaiOn" style="font-size: 24px;"></label></div>
-                            <!-- End: Switch With Label --><button class="btn btn-primary" type="button" style="margin-top: -45px;margin-left: 150px;background: rgb(90,78,223);">Save</button></div>
-                    </div>
+                            <div class="form-check" style="margin-top: 3px;text-align: left;padding-top: 27px;"><input class="form-check-input" type="checkbox" id="nsfw" style="margin-top: 3px;text-align: left;padding-top: 27px;"><label class="form-check-label" for="nsfw" style="margin-top: 2px;text-align: left;padding-top: 27px;">NSFW</label></div>
+                            <div
+                                class="form-check" style="margin-top: 2px;text-align: left;padding-top: 27px;"><input class="form-check-input" type="checkbox" id="toxicity" style="margin-top: 2px;text-align: left;padding-top: 27px;"><label class="form-check-label" for="toxicity" style="margin-top: 2px;text-align: left;padding-top: 27px;">Toxicity</label></div>
+                        <div
+                            class="form-check" style="margin-top: 2px;text-align: left;padding-top: 27px;"><input class="form-check-input" type="checkbox" id="homophobia" style="margin-top: 2px;text-align: left;padding-top: 27px;"><label class="form-check-label" for="homophobia" style="margin-top: 2px;text-align: left;padding-top: 27px;">Homophobia</label></div>
+                    <div
+                        class="form-check" style="margin-top: 2px;text-align: left;padding-top: 27px;"><input class="form-check-input" type="checkbox" id="advert" style="margin-top: 2px;text-align: left;padding-top: 27px;"><label class="form-check-label" for="advert" style="margin-top: 2px;text-align: left;padding-top: 27px;">Adverts</label></div>
+                <div
+                    class="form-check" style="margin-top: 2px;text-align: left;padding-top: 27px;"><input class="form-check-input" type="checkbox" id="racism" style="margin-top: 2px;"><label class="form-check-label" for="racism" style="margin-top: 2px;padding-top: 52px;margin-bottom: -14px;">Racism</label></div>
+            <h1 style="font-size: 22px;margin-top: 20px;">DazAI On?</h1>
+            <!-- Start: Switch With Label -->
+            <div class="form-check custom-control custom-switch"><input class="form-check-input custom-control-input" type="checkbox" id="dazaiOn" onchange="doalert(this,&#39;dazaiOnControl&#39;,&#39;On|Off&#39;)"><label class="form-check-label custom-control-label" id="dazaiOnControl" for="dazaiOn" style="font-size: 24px;"></label></div>
+            <!-- End: Switch With Label --><button class="btn btn-primary" type="button" style="margin-top: -45px;margin-left: 150px;background: rgb(90,78,223);">Save</button></div>
+    </div>
+    </div>
+    </div>
+    <!-- End: Chart -->
+    <div class="row">
+        <div class="col-lg-6 mb-4">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="text-primary font-weight-bold m-0">Commands</h6>
                 </div>
-            </div>
-            <!-- End: Chart -->
-            <div class="row">
-                <div class="col-lg-6 mb-4">
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h6 class="text-primary font-weight-bold m-0">Commands</h6>
-                        </div>
-                        <div class="card-body">
-                            <!-- Start: Table With Search -->
-                            <div class="col-md-12 search-table-col" style="margin-top: 0px;"><span class="counter pull-right"></span>
-                                <div class="form-group pull-right col-lg-4" style="text-align: center;width: 166px;margin-right: 208px;"><input type="text" class="search form-control" placeholder="Search Command" style="width: 240px;text-align: left;"></div>
-                                <div class="table-responsive table-bordered table table-hover table-bordered results">
-                                    <table class="table table-bordered table-hover">
-                                        <thead class="bill-header cs">
-                                            <tr>
-                                                <th id="trs-hd" class="col-lg-1">Command</th>
-                                                <th id="trs-hd" class="col-lg-2">Disabled?</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody id="cmds"></tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            <!-- End: Table With Search -->
+                <div class="card-body">
+                    <!-- Start: Table With Search -->
+                    <div class="col-md-12 search-table-col" style="margin-top: 0px;"><span class="counter pull-right"></span>
+                        <div class="form-group pull-right col-lg-4" style="text-align: center;width: 166px;margin-right: 208px;"><input type="text" class="search form-control" placeholder="Search Command" style="width: 240px;text-align: left;"></div>
+                        <div class="table-responsive table-bordered table table-hover table-bordered results">
+                            <table class="table table-bordered table-hover">
+                                <thead class="bill-header cs">
+                                    <tr>
+                                        <th id="trs-hd" class="col-lg-1">Command</th>
+                                        <th id="trs-hd" class="col-lg-2">Disabled?</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="cmds"></tbody>
+                            </table>
                         </div>
                     </div>
+                    <!-- End: Table With Search -->
                 </div>
             </div>
         </div>
+    </div>
+    </div>
     </div>
     <footer class="bg-white sticky-footer">
         <div class="container my-auto">
