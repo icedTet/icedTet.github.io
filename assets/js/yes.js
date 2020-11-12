@@ -22,7 +22,7 @@ function httpGet(theUrl) {
     // xmlHttp.send( JSON.stringify(theUrl) );
     // console.log(xmlHttp.statusText)
 
-    return new Promise(function (res, rej) {
+    return new Promise(function (res, rej) { 
         const Http = new XMLHttpRequest();
         const url = 'https://api.dazai.app:8080/api/botstats';
         Http.open("GET", url);
