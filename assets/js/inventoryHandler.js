@@ -192,10 +192,12 @@ async function yes() {
                         if (item.isNumbered){
                             let ntext = []
                             let filt = data.inventory.filter(x=>x.id.toLowerCase() === item.itemID.toLowerCase())
+
+                            filt.sort((a,b)=> (a.serial|| 0 )-(b.serial || 0))
                             for (let b = 0 ; b< filt.length;b++){
-                                ntext.push((filt[b].serial || "N/A")+ " of "+item.currentNum);
+                                ntext.push("#"+(filt[b].serial || "N/A")+ " of "+item.currentNum);
                             }
-                            fp +='<p class="card-text" style="font-size: 12px;color: rgb(200,200,200);">Serial Numbers:<br /><code>'+ntext.join("<br />")+'</code></p>'
+                            fp +='<p class="card-text" style="font-size: 12px;color: rgb(200,200,200);">You Own :<br /><code>'+ntext.join("<br />")+'</code></p>'
                         } 
                 fp +="</div>\
                 </div>\
