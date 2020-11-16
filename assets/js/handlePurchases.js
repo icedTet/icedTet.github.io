@@ -244,7 +244,7 @@ async function yes() {
         offers.forEach((item, index) => {
             let addGroup = (index % 2 == 0 ? group1 : (index % 2 == 1 ? group2 : group3))
             let set = false;
-            if (item.color[0] == -1 && item.color[1] == -1 item.color[2] == -1){
+            if (item.color[0] == -1 && item.color[1] == -1 && item.color[2] == -1){
                 item.color = [0,0,0];
                 set = true;
             }
