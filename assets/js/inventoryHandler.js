@@ -168,6 +168,11 @@ async function yes() {
             }).length;
             return item;
         })
+        let height = 400
+        let numbered = items.filter(x=>x.isNumbered).sort((a,b)=>b.amnt-a.amnt);
+        if (numbered.length > 0){
+            height += (numbered[0].amnt)*50
+        }
         items.sort((a,b)=>b.amnt-a.amnt)
         for (let a = 0 ; a < Math.ceil(items.length/3);a++){
             let fp = "<div class=\"row align-items-center\">";
@@ -175,14 +180,24 @@ async function yes() {
                 item = items[i];
                 // console.log(item)
                 fp = fp+"<div class=\"col\" style=\"opacity: "+(item.amnt!==0? 1:0.2)+";\">"
-                fp += "<div class=\"card\" style=\"height: 400px;margin-top: 15px;margin-bottom: 15px;\">\
+                fp += "<div class=\"card\" style=\"height: "+height+"px;margin-top: 15px;margin-bottom: 15px;\">\
                     <div class=\"card\" ><img class=\"card-img-top w-100 d-block\" src=\""+item.image+"\" /></div>\
                     <div class=\"card-body\">\
                     <p class=\"card-text\" style=\"font-size: 12px;color: rgb(200,200,200);\">x"+item.amnt+"</p>\
-                        <h4 class=\"card-title\">"+item.itemName+"</h4>\
+                    <p style=\"font-size: 12px;color: rgb(100,100,100);\">id: <code>"+item.itemID+"</code></p>"
+                
+                fp +="<h4 class=\"card-title\">"+item.itemName+"</h4>\
                         <h6 class=\"text-muted card-subtitle mb-2\">"+(CapEach(item.rarity)).replace(/\_/g," ")+"</h6>\
-                        <p class=\"card-text\">"+item.itemLore+"</p>\
-                    </div>\
+                        <p class=\"card-text\">"+item.itemLore+"</p>"
+                        if (item.isNumbered){
+                            let ntext = []
+                            let filt = data.inventory.filter(x=>x.id.toLowerCase() === item.itemID.toLowerCase())
+                            for (let b = 0 ; b< filt.length;b++){
+                                ntext.push((filt[b].serial || "N/A")+ " of "+item.currentNum);
+                            }
+                            fp +='<p class="card-text" style="font-size: 12px;color: rgb(200,200,200);">Serial Numbers:<br /><code>'+ntext.join("<br />")+'</code></p>'
+                        } 
+                fp +="</div>\
                 </div>\
             </div>"
             }
