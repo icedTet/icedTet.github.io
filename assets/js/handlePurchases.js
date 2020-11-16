@@ -192,6 +192,7 @@ async function yes() {
         let group2 = document.getElementById("group2")
         // let group3 = document.getElementById("group-3")
         async function foreverColor(itemOBJ){
+            // itemOBJ = ;
             let max = 247;
             let min = 121;
             let r = max;
@@ -238,24 +239,26 @@ async function yes() {
                         currentStage = "g+";
                     }
                 }
-                itemOBJ.style.color = "rgb("+r+","+g+","+b+")";
-            }, 10);
+                document.getElementById(itemOBJ).style.color = "rgb("+r+","+g+","+b+")";
+                // console.log(document.getElementById(itemOBJ))
+            }, 20);
         }
         offers.forEach((item, index) => {
             let addGroup = (index % 2 == 0 ? group1 : (index % 2 == 1 ? group2 : group3))
             let set = false;
             if (item.color[0] == -1 && item.color[1] == -1 && item.color[2] == -1){
-                item.color = [0,0,0];
+                item.color = [255,255,255];
                 set = true;
             }
+            let Uid = Math.round(Math.random()*100000000000)
             addGroup.innerHTML += "<div class=\"card\" data-aos=\"zoom-in\"><img class=\"card-img-top w-100 d-block\" src=\"" + item.fullImg + "\" />\
         <div class=\"card-body\">\
-            <h4 class=\"card-title\" style=\"font-size: 24px;color: rgb("+item.color[0]+","+item.color[1]+","+item.color[2]+")\">"+ item.name + "</h4>\
+            <h4 class=\"card-title\" style=\"font-size: 24px;color: rgb("+item.color[0]+","+item.color[1]+","+item.color[2]+")\" id= \""+(item.idName+Uid+"")+"\">"+ item.name + "</h4>\
             <p style=\"font-size: 14px;color: rgb("+item.color[0]+","+item.color[1]+","+item.color[2]+")\" id= \""+item.idName+"col\">"+item.rarity.toUpperCase().replace(/\_/g," ")+"</P>\
             <h4 class=\"card-title\" style=\"font-size: 16px;color: "+ (balinfo >= item.price ? "rgb(213,216,252)" : "rgb(213,50,50)") + ";\">" + item.price + " DC</h4>\
             <p class=\"card-text\">"+ item.lore + "</p>" + (balinfo >= item.price ? "<button class=\"btn\" type=\"button\" onclick=\"buyItem(\'"+item.idName+"\')\" style=\"margin-top: 10px;\">Buy Now</button>" : "") + "</div>\
     </div>";
-            if (set) foreverColor(document.getElementById(item.idName+"col"));
+            if (set) foreverColor(item.idName+Uid+"");
         });
 
         //     var element = document.getElementById("reroBody");
