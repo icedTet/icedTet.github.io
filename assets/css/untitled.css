@@ -107,7 +107,7 @@ a:focus, a:hover {
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-width: 0;
+  min-width: 350px;
   word-wrap: break-word;
   background-color: #1f1f1f;
   background-clip: border-box;
