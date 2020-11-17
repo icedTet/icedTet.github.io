@@ -171,7 +171,7 @@ async function yes() {
         let height = 400
         let numbered = items.filter(x=>x.isNumbered).sort((a,b)=>b.amnt-a.amnt);
         if (numbered.length > 0){
-            height += (numbered[0].amnt)*50
+            height += (numbered[0].amnt)*20
         }
         items.sort((a,b)=>b.amnt-a.amnt)
         for (let a = 0 ; a < Math.ceil(items.length/3);a++){
@@ -198,7 +198,8 @@ async function yes() {
                                 ntext.push("#"+(filt[b].serial || "N/A")+ " of "+item.currentNum);
                             }
                             fp +='<p class="card-text" style="font-size: 12px;color: rgb(200,200,200);">You Own :<br /><code>'+ntext.join("<br />")+'</code></p>'
-                        } 
+                        }
+                
                 fp +="</div>\
                 </div>\
             </div>"

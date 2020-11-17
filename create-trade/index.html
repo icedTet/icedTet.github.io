@@ -57,34 +57,18 @@
             </div>
         </div>
     </nav>
-    <h1 class="display-1" style="text-align: center;margin-top: 100px;font-family: Catamaran, sans-serif;">Inventory</h1>
+    <h1 class="display-1" style="text-align: center;margin-top: 100px;font-family: Catamaran, sans-serif;">Create Trade</h1>
+    <h1 class="display-1" id="giveAwayTitle" style="text-align: left;margin-top: 0px;font-family: Catamaran, sans-serif;font-size: 32px;padding-left: 20px;display:none">Willing to give:</h1>
+    <div class="container" id="give">
+        <div class="row row-cols-3" id="givegib" style="margin-top: -45px;"></div>
+    </div>
+    <h1 class="display-1" id="TakeTitle" style="text-align: left;margin-top: 15px;font-family: Catamaran, sans-serif;font-size: 32px;padding-left: 20px;display:none;">In exchange for:</h1>
+    <div class="container" id="take">
+        <div class="row" style="margin-top: -45px;"></div>
+        <div class="row row-cols-3" id="takey" style="margin-top: -45px;"></div>
+    </div>
     <div class="container-xl" id="allInv" style="margin-left: 5px;margin-top: 50px;">
-        <div class="row align-items-stretch" style="margin-top: 15px;">
-            <div class="col">
-                <div class="card" style="width: 379;">
-                    <div class="card" style="opacity: 0.50;"><img class="card-img-top w-100 d-block" src="../assets/img/dazai.png"></div>
-                    <div class="card-body" style="width: 200;height: 192px;">
-                        <p class="card-text" style="font-size: 12px;color: rgb(200,200,200);">x5</p>
-                        <p class="card-text" style="font-size: 12px;color: rgb(200,200,200);">id:&nbsp;<code>dazai<br></code></p>
-                        <p class="card-text" style="font-size: 12px;color: rgb(200,200,200);">Serial Numbers:<br><code>1 of 3000<br>2 of 3000<br></code></p>
-                        <h4 class="card-title">Dazai</h4>
-                        <h6 class="text-muted card-subtitle mb-2">Super Rare</h6>
-                        <p class="card-text">%LORE%</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col" style="margin: 15px;">
-                <div class="card" style="width: 379;">
-                    <div class="card" style="opacity: 0.50;"><img class="card-img-top w-100 d-block" src="../assets/img/dazai.png"></div>
-                    <div class="card-body" style="height: 202px;">
-                        <p class="card-text" style="font-size: 12px;color: rgb(200,200,200);">x5</p>
-                        <h4 class="card-title">Dazai</h4>
-                        <h6 class="text-muted card-subtitle mb-2">Super Rare</h6>
-                        <p class="card-text">%LORE%<br><br>a</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div style="text-align: center;"><button class="btn btn-primary" id="create-trade" type="button" style="background: rgb(24,24,24);border-radius: 9px;border-width: 0px;display:none;" onclick="createTrade()">Create trade</button></div>
     </div>
     <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
@@ -103,9 +87,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/js/widgets/widget-storage.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/inventoryHandler.js"></script>
     <script src="../assets/js/new-age.js"></script>
     <script src="../assets/js/Table-With-Search.js"></script>
+    <script src="../assets/js/tradeInvHandler.js"></script>
 </body>
 
 </html>
