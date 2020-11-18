@@ -115,9 +115,9 @@ a:focus, a:hover {
   border-radius: .25rem;
 }
 
-@media (min-width:1200px) {
+@media (min-width:100px) {
   .container, .container-lg, .container-md, .container-sm, .container-xl {
-    max-width: 5000px;
+    max-width: 5657px;
   }
 }
 

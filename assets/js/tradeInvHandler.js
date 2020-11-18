@@ -35,17 +35,6 @@ function httpGet(theUrl) {
     theUrl.code = JSON.parse(localStorage.getItem("DazaiAPIData")).authToken;
     return new Promise(function (res, rej) {
 
-
-        // try {
-        //     if (localStorage.getItem("DazaiGuildListCached") && JSON.parse(localStorage.getItem("DazaiGuildListCached")).expire > (new Date()).getTime()){
-        //         // console.log(JSON.parse(localStorage.getItem("DazaiGuildListCached")).data,"Returning cache")
-        //         res(JSON.parse(localStorage.getItem("DazaiGuildListCached")).data);
-        //         return;
-        //     }
-        // } catch (error) {
-        //     // alert(error)
-        // }
-
         const Http = new XMLHttpRequest();
         const url = 'https://api.dazai.app:8080/api/getInventory';
         Http.open("POST", url);
@@ -54,7 +43,6 @@ function httpGet(theUrl) {
         // Http.setRequestHeader('Authorization', 'Bearer ' + access_token);
         Http.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         Http.onreadystatechange = (e) => {
-            //   console.log(Http.responseText)
             if (Http.readyState == 4 || Http.readyState == "complete") {
                 res(Http.responseText);
             }
@@ -72,7 +60,6 @@ function login(token) {
     // }  
     // xmlHttp.open( "GET", "http://98.37.151.150:8080/api/admin", false ); // false for synchronous request
     // xmlHttp.send( JSON.stringify(theUrl) );
-    // console.log(xmlHttp.statusText) 
     // theUrl.code = JSON.parse(localStorage.getItem("DazaiAPIData")).authToken;
     return new Promise(function (res, rej) {
 
@@ -110,8 +97,8 @@ function login(token) {
     let takes = document.getElementById("takey")
     let str ;
     if (offers.childElementCount === 0 && takes.childElementCount === 0) return alert("You cannot create a blank trade!");
-    if (takes.childElementCount === 0 && !confirm("Are you sure you want to leave the return box blank (You are donating your offerings)?"));
-    if (offers.childElementCount === 0 && !confirm("Are you sure you want to leave the offer box blank (You are asking for donations)?"));
+    if (takes.childElementCount === 0 && !confirm("Are you sure you want to leave the return box blank (You are donating your offerings)?")) return;
+    if (offers.childElementCount === 0 && !confirm("Are you sure you want to leave the offer box blank (You are asking for donations)?")) return;
     if (!confirm("Are you 100% Sure you would like to create the trade? You will lose access to the offered items for as long as the trade is on")) return;
     let Http = new XMLHttpRequest();
     const url = 'https://api.dazai.app:8080/api/create-trade';
@@ -139,12 +126,13 @@ function login(token) {
     let offer = [];
     console.log(offers.childNodes)
     offers.childNodes.forEach(x=>offer.push(x));
-    let take = [];
+    let take = []; 
     takes.childNodes.forEach(x=>take.push(x));
     offer = offer.map(x=>{
         let quant; 
         try {
-            quant = parseInt(x.childNodes[0].childNodes[3].childNodes[14].innerText.replace("Quantity : ",""));
+            console.log("x.childNodes[0].childNodes[3].childNodes[10]",x.childNodes[0].childNodes[3].childNodes[12])
+            quant = parseInt(x.childNodes[0].childNodes[3].childNodes[12].innerText.replace("Serial Number: ",""));
             if (isNaN(quant)) quant = undefined;
         } catch (error) {
             
@@ -164,13 +152,14 @@ function login(token) {
         }
        
     })
-    console.log(offer,"ar",take)
+    // console.log(offer,"ar",take)
     // console.log(token);
     // return;
     Http.send(JSON.stringify({
         code: JSON.parse(localStorage.getItem("DazaiAPIData")).authToken,
         give: offer,
         want: take,
+        anon: document.getElementById("checkAnon").checked
     }));
 }
 async function removeItem(self){
@@ -184,7 +173,10 @@ async function removeItem(self){
     let takes = document.getElementById("takey")
     let str ;
     self.parentElement.parentElement.parentElement.remove();
-    if (offers.childElementCount === 0 && takes.childElementCount === 0) document.getElementById("create-trade").style = "background: rgb(24,24,24);border-radius: 9px;border-width: 0px;display:none;"
+    if (offers.childElementCount === 0 && takes.childElementCount === 0){
+        document.getElementById("create-trade").style = "background: rgb(24,24,24);border-radius: 9px;border-width: 0px;display:none;";
+        document.getElementById("checkboxx").style = "display:none;"
+    }
     
 }
 function CapEach(str){
@@ -207,13 +199,14 @@ async function addToOffer(id,self){
     if (qres < 0){
         return;
     }
-    if (qres == 0){
-        self.parentElement.parentElement.parentElement.style = "opacity: 0.2";
-    }
+    
     self.parentElement.children[0].innerText = "x"+ qres;
     if (offers.childElementCount > 5){
         alert("You can only give away a maximum of 6 items per side!");
         return
+    }
+    if (qres == 0){
+        self.parentElement.parentElement.parentElement.style = "opacity: 0.2";
     }
     let item = document.getElementById(id);
     // console.log(item)
@@ -253,9 +246,11 @@ async function addToOffer(id,self){
     // console.log(clone.innerHTML.includes('<p class="card-text" style="font-size: 12px;color: rgb(200,200,200);">You Own :<br><code>#')
     clone.childNodes[0].childNodes[3].innerHTML += '<br><p style="font-size: 24px;color: rgb(200,200,200);" id="'+id+'-quant-give">Quantity : 1</p>'+ '<button class="btn btn-primary ffs" type="button" style="background: rgb(200,50,50);margin:0px;border-radius: 5px;border-width: 0px;margin-left:-1px" onclick="removeItem(this)">Remove Item</button>';
     offers.append(clone);
+    document.getElementById("checkboxx").style = "";
     document.getElementById("create-trade").style = "background: rgb(24,24,24);border-radius: 9px;border-width: 0px;"
     gtitle.style = "text-align: left;margin-top: 0px;font-family: Catamaran, sans-serif;font-size: 32px;padding-left: 20px;"
     tTitle.style = "text-align: left;margin-top: 15px;font-family: Catamaran, sans-serif;font-size: 32px;padding-left: 20px;";
+    
     // (takes.childElementCount == 0? tTitle.innerText = tTitle.innerText.replace(" Nothing Wanted!","")+" Nothing Wanted!" : tTitle.innerText = tTitle.innerText.replace(" Nothing Wanted!",""));
     // (offers.childElementCount == 0? gtitle.innerText= gtitle.innerText.replace(" Nothing Offered!","")+ " Nothing Offered!" : gtitle.innerText = gtitle.innerText.replace(" Nothing Offered!",""));
 }
@@ -287,10 +282,12 @@ async function addToWant(id){
     cl.style = "opacity: 1.0";
     cl.childNodes[0].childNodes[3].innerHTML += '<br><p style="font-size: 24px;color: rgb(200,200,200);" id="'+id+'-quant-want">Quantity : 1</p>' + '<button class="btn btn-primary ffs" type="button" style="background: rgb(200,50,50);margin:0px;border-radius: 5px;border-width: 0px;margin-left:-1px" onclick="removeItem(this)">Remove Item</button>';
     takes.append(cl);
+    document.getElementById("checkboxx").style = ""
     document.getElementById("create-trade").style = "background: rgb(24,24,24);border-radius: 9px;border-width: 0px;"
     gtitle.style = "text-align: left;margin-top: 0px;font-family: Catamaran, sans-serif;font-size: 32px;padding-left: 20px;"
     tTitle.style = "text-align: left;margin-top: 15px;font-family: Catamaran, sans-serif;font-size: 32px;padding-left: 20px;";
     // (takes.childElementCount == 0? tTitle.innerText = tTitle.innerText.replace(" Nothing Wanted!","")+" Nothing Wanted!" : tTitle.innerText = tTitle.innerText.replace(" Nothing Wanted!",""));
+    
     // (offers.childElementCount == 0? gtitle.innerText= gtitle.innerText.replace(" Nothing Offered!","")+ " Nothing Offered!" : gtitle.innerText = gtitle.innerText.replace(" Nothing Offered!",""));
 }
 async function yes() {
@@ -309,20 +306,24 @@ async function yes() {
         // return;
     }
     httpGet(guildid).then(chans => {
-
+     
         // console.log()
         const data = JSON.parse(chans)
+        console.warn(data,"a");
         let items = data.allItems;
         let element = document.getElementById("allInv");
+        
         items = items.map((item)=>{
             let arr = data.inventory.map(x=>x.id);
             console.log(arr)
             item["amnt"] = arr.filter(x=>{
-                console.log(x,item.itemName,x.toLowerCase() === item.itemID.toLowerCase())
+                // console.log(x,item.itemName,x.toLowerCase() === item.itemID.toLowerCase())
                 return x.toLowerCase() === item.itemID.toLowerCase()
             }).length;
-            return item;
+
+            return item.isTradeable == 1? item:null;
         })
+        items = items.filter(x=>x?true:false);
         let height = 450
         let numbered = items.filter(x=>x.isNumbered).sort((a,b)=>b.amnt-a.amnt);
         if (numbered.length > 0){
@@ -334,6 +335,7 @@ async function yes() {
             for (let i =a*3 ; i<((a*3)+3);i++){
                 item = items[i];
                 // console.log(item)
+                if (!item.isTradeable) continue;
                 fp = fp+"<div class=\"col\" style=\"opacity: "+(item.amnt!==0? 1:0.2)+";\" id= \""+item.itemID+"-card\">"
                 fp += "<div class=\"card\" style=\"height: "+height+"px;margin-top: 15px;margin-bottom: 15px;\">\
                     <div class=\"card\" ><img class=\"card-img-top w-100 d-block\" src=\""+item.image+"\" /></div>\
@@ -363,7 +365,9 @@ async function yes() {
             fp += "</div>";
             element.innerHTML+= fp;
         }
+    
     })
+   
 }
 yes();
 

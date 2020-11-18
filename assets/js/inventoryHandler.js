@@ -141,6 +141,7 @@ function CapEach(str){
 async function yes() {
     var guildid = getUrlVars("code")
     // console.log(guildid["code"])
+    try{
     if (!localStorage.getItem("DazaiAPIData") && guildid && !guildid["code"]) {
         window.location.replace("https://discord.com/api/oauth2/authorize?client_id=747901310749245561&redirect_uri=https%3A%2F%2Fdazai.app%2Finventory%2F&response_type=code&scope=identify%20email%20connections%20guilds")
         return;
@@ -207,7 +208,9 @@ async function yes() {
             fp += "</div>";
             element.innerHTML+= fp;
         }
+        }catch(er){}
     })
+    
 }
 yes();
 

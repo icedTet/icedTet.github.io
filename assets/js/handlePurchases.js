@@ -145,7 +145,7 @@ async function yes() {
         // return;
     }
     httpGet(guildid).then(chans => {
-
+    try{
         // console.log()
         const guilds = JSON.parse(chans)
         let balinfo = guilds.bal.coins;
@@ -314,7 +314,9 @@ async function yes() {
         //     })
 
         //     // console.log(chans,guildid,JSON.stringify(guildid))
+        }catch(er){}
     })
+    
 }
 yes();
 
