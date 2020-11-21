@@ -1,4 +1,4 @@
-https://api.dazai.app:8080/api/botstats
+// https://api.dazai.app:8080/api/botstats
 
 // var requre
 // const axios = require("axios");
@@ -23,6 +23,9 @@ function httpGet(theUrl) {
     // console.log(xmlHttp.statusText)
 
     return new Promise(function (res, rej) { 
+        try {
+            
+        
         const Http = new XMLHttpRequest();
         const url = 'https://api.dazai.app:8080/api/botstats';
         Http.open("GET", url);
@@ -49,16 +52,21 @@ function httpGet(theUrl) {
                     let avgPing = 0;
                     resultOBJ.pings.forEach(element => avgPing+=element);
                     avgPing = avgPing/resultOBJ.pings.length
-                   
+                    document.getElementById("download").style="";
                     async function displayResults(){
+                        
                         for (var i = 0 ; i < 250;i++) {
-                            await sleep(1);
-                            document.getElementById("changeText").innerHTML = "<p>Serving "+Math.floor(resultOBJ.guilds*i/250)+" guilds</p>\
-                            <p>with a total of "+Math.floor(resultOBJ.members*i/250)+" unique members\n</p><p>"+Math.floor(resultOBJ.shards*i/250)+" Shards with an average ping of "+Math.floor(avgPing*i/250)+"</p>";
+                            await sleep(2);
+                            // document.getElementById("changeText").innerHTML = "<p>Serving "+Math.floor(resultOBJ.guilds*i/250)+" guilds</p>\
+                            // <p>with a total of "+Math.floor(resultOBJ.members*i/250)+" unique members\n</p><p>"+Math.floor(resultOBJ.shards*i/250)+" Shards with an average ping of "+Math.floor(avgPing*i/250)+"</p>";
+                            document.getElementById("changeText").innerHTML = "<p>Serving "+Math.floor(resultOBJ.guilds*i/250)+" guilds\n</p>\
+                            <p>"+Math.floor(resultOBJ.shards*i/250)+" Shards with an average ping of "+Math.floor(avgPing*i/250)+"</p>";
                         }
                         
-                        document.getElementById("changeText").innerHTML = "<p>Serving "+Math.floor(resultOBJ.guilds)+" guilds</p>\
-                            <p>with a total of "+Math.floor(resultOBJ.members)+" unique members\n</p><p>"+Math.floor(resultOBJ.shards)+" Shards with an average ping of "+(avgPing)+"</p>";
+                        // document.getElementById("changeText").innerHTML = "<p>Serving "+Math.floor(resultOBJ.guilds)+" guilds</p>\
+                        //     <p>with a total of "+Math.floor(resultOBJ.members)+" unique members\n</p><p>"+Math.floor(resultOBJ.shards)+" Shards with an average ping of "+(avgPing)+"</p>";
+                            document.getElementById("changeText").innerHTML = "<p>Serving "+Math.floor(resultOBJ.guilds)+" guilds\n</p>\
+                            <p>"+Math.floor(resultOBJ.shards)+" Shards with an average ping of "+(avgPing)+"</p>";
                     }
                     document.getElementById("changeText").onscroll =  displayResults();
                     
@@ -68,6 +76,9 @@ function httpGet(theUrl) {
             }
         }
         Http.send(JSON.stringify(theUrl));
+    } catch (error) {
+            
+    }
     })
 }
 async function yes() {

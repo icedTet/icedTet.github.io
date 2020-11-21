@@ -163,6 +163,7 @@ function acceptTrade(){
                 alert(resp.reason);
             }
             console.log(Http.responseText);
+            alert("Trade Complete!");
         }
     }
     console.log(theUrl)
