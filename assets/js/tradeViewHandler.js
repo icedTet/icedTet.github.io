@@ -159,8 +159,14 @@ function acceptTrade(){
         if (Http.readyState == 4 || Http.readyState == "complete") {
             // res(Http.responseText);
             let resp = JSON.parse(Http.responseText)
+            if (resp === "relog"){
+                alert("Invalid Session.")
+                localStorage.clear();
+                window.location.replace("http://dazai.app/self/");
+            }
             if (resp.failed){
                 alert(resp.reason);
+                return;
             }
             console.log(Http.responseText);
             alert("Trade Complete!");

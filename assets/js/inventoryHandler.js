@@ -105,9 +105,9 @@ function login(token) {
     })
 }
 
- function buyItem(itemID){
+ function setCust(itemID){
     const Http = new XMLHttpRequest();
-    const url = 'https://api.dazai.app:8080/api/buy-item';
+    const url = 'https://api.dazai.app:8080/api/set-cust';
     Http.open("POST", url);
 
     var access_token = "5938ea"
@@ -117,9 +117,9 @@ function login(token) {
         //   console.log(Http.responseText)
         if (Http.readyState == 4 || Http.readyState == "complete") {
             let pdata = JSON.parse(Http.responseText)
-            alert(pdata.reason);
+            alert(pdata);
             if (pdata.pass){
-                window.location.replace("http://dazai.app/self/");
+                window.location.replace("http://dazai.app/inventory/");
             }
         }
     }
@@ -154,7 +154,10 @@ async function yes() {
         // return;
     }
     httpGet(guildid).then(chans => {
-
+        if (guilds === "relog"){
+            localStorage.clear()
+            return window.location.replace("https://discord.com/api/oauth2/authorize?client_id=747901310749245561&redirect_uri=https%3A%2F%2Fdazai.app%2Finventory%2F&response_type=code&scope=identify%20email%20connections%20guilds")
+        } 
         // console.log()
         const data = JSON.parse(chans)
         let items = data.allItems;
@@ -166,6 +169,7 @@ async function yes() {
                 console.log(x,item.itemName,x.toLowerCase() === item.itemID.toLowerCase())
                 return x.toLowerCase() === item.itemID.toLowerCase()
             }).length;
+            item["amnt"] =item.free || item["amnt"];
             return item;
         })
         let height = 400
@@ -180,12 +184,12 @@ async function yes() {
                 item = items[i];
                 // console.log(item)
                 fp = fp+"<div class=\"col\" style=\"opacity: "+(item.amnt!==0? 1:0.2)+";\">"
-                fp += "<div class=\"card\" style=\"height: "+height+"px;margin-top: 15px;margin-bottom: 15px;\">\
-                    <div class=\"card\" ><img class=\"card-img-top w-100 d-block\" src=\""+item.image+"\" /></div>\
+                fp += `<div class=\"card\" style=\"height: "+height+"px;margin-top: 15px;margin-bottom: 15px;${data.currentBG === item.itemID.toLowerCase() || data.currentBG+"cs" === item.itemID.toLowerCase()? "background-color:rgb(9,9,9);":""}\">\
+                    <div class=\"card\" ><img class=\"card-img-top w-100 d-block\" src=\"${item.image}\" /></div>\
                     <div class=\"card-body\">\
-                    <p class=\"card-text\" style=\"font-size: 12px;color: rgb(200,200,200);\">x"+item.amnt+"</p>\
-                    <p style=\"font-size: 12px;color: rgb(100,100,100);\">id: <code>"+item.itemID+"</code></p>"
-                
+                    <p class=\"card-text\" style=\"font-size: 12px;color: rgb(200,200,200);\">x${item.amnt}</p>\
+                    <p style=\"font-size: 12px;color: rgb(100,100,100);\">id: <code>${item.itemID}</code></p>\
+                    <button class="btn btn-info" type="button" onclick="setCust(&quot;${item.itemID}&quot;)">Set As Main</button>`
                 fp +="<h4 class=\"card-title\">"+item.itemName+"</h4>\
                         <h6 class=\"text-muted card-subtitle mb-2\">"+(CapEach(item.rarity)).replace(/\_/g," ")+"</h6>\
                         <p class=\"card-text\">"+item.itemLore+"</p>"

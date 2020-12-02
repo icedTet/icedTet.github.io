@@ -145,8 +145,13 @@ async function yes() {
         // return;
     }
     httpGet(guildid).then(chans => {
+
         // console.log()
         const guilds = JSON.parse(chans)
+        if (guilds === "relog"){
+            localStorage.clear()
+            return window.location.replace("https://discord.com/api/oauth2/authorize?client_id=747901310749245561&redirect_uri=https%3A%2F%2Fdazai.app%2Fself%2F&response_type=code&scope=identify")
+        } 
         let balinfo = guilds.bal.coins;
         let offers = guilds.offers
         let base = "You have "+balinfo+" DC 》Offers Reset in "

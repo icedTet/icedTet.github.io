@@ -306,7 +306,10 @@ async function yes() {
         // return;
     }
     httpGet(guildid).then(chans => {
-     
+        if (guilds === "relog"){
+            localStorage.clear()
+            return window.location.replace("https://discord.com/api/oauth2/authorize?client_id=747901310749245561&redirect_uri=https%3A%2F%2Fdazai.app%2Finventory%2F&response_type=code&scope=identify%20email%20connections%20guilds")
+        } 
         // console.log()
         const data = JSON.parse(chans)
         console.warn(data,"a");
