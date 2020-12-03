@@ -152,7 +152,7 @@ async function yes() {
             localStorage.clear()
             return window.location.replace("https://discord.com/api/oauth2/authorize?client_id=747901310749245561&redirect_uri=https%3A%2F%2Fdazai.app%2Fself%2F&response_type=code&scope=identify")
         } 
-        let balinfo = guilds.bal.coins;
+        let balinfo = guilds.bal;
         let offers = guilds.offers
         let base = "You have "+balinfo+" DC 》Offers Reset in "
 
