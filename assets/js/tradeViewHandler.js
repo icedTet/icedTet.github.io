@@ -205,7 +205,13 @@ async function yes() {
     let giveup = tradeData.trade.tradetake;
     document.getElementById("lengthA").style = "width: "+((tradeData.user.name.length*20)+350)+"px;text-align: right;"
     document.getElementById("traderName").innerHTML = tradeData.user.name + '<img id="traderPic" src="'+tradeData.user.avatar+'" width="48" height="48" style="margin-left: 50px;border-radius:10px" />'
+    if (tradeData.user2){
+        document.getElementById("traderName-1").innerHTML = tradeData.user2.name + '<img id="traderPic-1" src="'+tradeData.user2.avatar+'" width="48" height="48" style="margin-left: 50px;border-radius:10px" />'
    
+    }else{
+        document.getElementById("unhidecard-1").remove();
+        document.getElementById("tradeBtn").remove();
+    }
    //  document.getElementById("traderPic").src = +tradeData.user.avatar
     document.getElementById("unhidecard").style = "margin-left: 25px;";
      if (getinv){
@@ -234,9 +240,10 @@ async function yes() {
     });
        
     }
-        if (!getinv){
+        if (!getinv && !tradeData.user2){
             document.getElementById("tradeBtn").innerHTML = "Sign in to Trade!"
         }
+
         let offerI = document.getElementById("group1");
         let gib = document.getElementById("group2");
         offers.forEach(x=>{

@@ -121,3 +121,7 @@ a:focus, a:hover {
   }
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
