@@ -1,6 +1,6 @@
 .bg-primary {
   background: #101010;
-  background: linear-gradient(rgb(33,33,33),rgb(13,13,13));
+  background: linear-gradient(rgb(33,33,33),rgb(33,33,33));
 }
 
 .btn.active, .btn:active, .btn:focus, .btn:hover {
