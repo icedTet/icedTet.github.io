@@ -10,8 +10,8 @@
 }
 
 .btn-outline-warning:not(:disabled):not(.disabled).active, .btn-outline-warning:not(:disabled):not(.disabled):active, .show > .btn-outline-warning.dropdown-toggle {
-  color: #662d14;
-  background-color: #fff;
+  color: #ffffff;
+  background-color: rgba(200,200,200,0.4);
   border-color: #fff;
 }
 
@@ -32,18 +32,18 @@ header.masthead {
   padding-top: 150px;
   padding-bottom: 100px;
   color: #3e3e3e;
-  background: #7b4397;
-  background: linear-gradient(270deg,#7b4397,#dc2430);
+  /*background: #7b4397;*/
+  background: none;
 }
 
 #mainNav {
   border-color: rgb(35,35,35);
-  background-color: #292929;
+  background-color: rgba(41,41,41,0.1);
   transition: all .35s;
 }
 
 .bg-dark {
-  background-color: rgb(33,33,33)!important;
+  background-color: rgba(33,33,33,0.3)!important;
 }
 
 section.features .feature-item i {
@@ -149,7 +149,13 @@ html, body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Catamaran,Helvetica,Arial,"sans-serif";
-  font-weight: 50;
+  font-weight: 25;
   letter-spacing: 1px;
+}
+
+.btn.active, .btn:active, .btn:focus, .btn:hover {
+  color: #989898;
+  /*border-color: #fdcc52;*/
+  /*background-color: #fdcc52;*/
 }
 
