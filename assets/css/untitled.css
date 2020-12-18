@@ -101,23 +101,6 @@ a:focus, a:hover {
   border-top: 1px solid rgba(0,0,0,.125);
 }
 
-.card {
-  position: relative;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  /*min-width: 300px;*/
-  word-wrap: break-word;
-  background-color: rgba(0,0,0,0);
-  background-clip: border-box;
-  border: 1px solid rgba(0,0,0,.125);
-  border-radius: .25rem;
-  /*max-width: 450px;*/
-  height: 450px;
-  /*border-radius: 20px;*/
-}
-
 @media (min-width:100px) {
   .container, .container-lg, .container-md, .container-sm, .container-xl {
     max-width: 5657px;
