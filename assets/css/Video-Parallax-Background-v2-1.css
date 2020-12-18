@@ -29,7 +29,7 @@
 }
 
 .parallax-content {
-  min-height: 25vh;
+  min-height: 70vh;
   color: white;
   padding: 2em 1rem;
 }
@@ -40,7 +40,7 @@
 }
 
 .parallax-content .btn {
-  width: 200px;
+  width: 100px;
   /*margin: auto;*/
 }
 

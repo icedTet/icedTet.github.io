@@ -1,0 +1,24 @@
+.col {
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+  padding: 15px;
+}
+
+@media (min-width:100px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 80vh;
+  }
+}
+
+.w-100 {
+  width: 30%!important;
+  align-self: center;
+  /*height: 30%!important;*/
+  padding-top: 30%;
+  /*max-width: 200px;*/
+  margin-top: 32px;
+}
+
