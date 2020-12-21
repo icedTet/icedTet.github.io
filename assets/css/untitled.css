@@ -155,3 +155,11 @@ footer p {
   background-color: rgb(20,20,20);
 }
 
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: .75rem 1.25rem;
+  background-color: rgba(33,33,33,0.5);
+  border: 1px solid rgba(0,0,0,.125);
+}
+

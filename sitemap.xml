@@ -19,6 +19,9 @@
         <loc>https://dazai.app/inventory/index.html</loc>
     </url>
     <url>
+        <loc>https://dazai.app/permissions/index.html</loc>
+    </url>
+    <url>
         <loc>https://dazai.app/self/index.html</loc>
     </url>
     <url>
@@ -29,6 +32,9 @@
     </url>
     <url>
         <loc>https://dazai.app/trade/index.html</loc>
+    </url>
+    <url>
+        <loc>https://dazai.app/upcoming/index.html</loc>
     </url>
     <url>
         <loc>https://dazai.app/user/index.html</loc>
