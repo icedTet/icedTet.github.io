@@ -47,7 +47,7 @@ function httpGet(theUrl) {
         // }
 
         const Http = new XMLHttpRequest();
-        const url = 'https://api.dazai.app:8080/api/shop';
+        const url = 'https://api.dazai.app/api/shop';
         Http.open("POST", url);
 
         var access_token = "5938ea"
@@ -88,7 +88,7 @@ function login(token) {
         // }
         token.url = "https://dazai.app/self/"
         const Http = new XMLHttpRequest();
-        const url = 'https://api.dazai.app:8080/api/login';
+        const url = 'https://api.dazai.app/api/login';
         Http.open("POST", url);
 
         var access_token = "5938ea"
@@ -107,7 +107,7 @@ function login(token) {
 
  function buyItem(itemID){
     const Http = new XMLHttpRequest();
-    const url = 'https://api.dazai.app:8080/api/buy-item';
+    const url = 'https://api.dazai.app/api/buy-item';
     Http.open("POST", url);
 
     var access_token = "5938ea"

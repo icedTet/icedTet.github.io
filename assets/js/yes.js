@@ -1,4 +1,4 @@
-// https://api.dazai.app:8080/api/botstats
+// https://api.dazai.app/api/botstats
 
 // var requre
 // const axios = require("axios");
@@ -27,7 +27,7 @@ function httpGet(theUrl) {
             
         
         const Http = new XMLHttpRequest();
-        const url = 'https://api.dazai.app:8080/api/botstats';
+        const url = 'https://api.dazai.app/api/botstats';
         Http.open("GET", url);
 
         var access_token = "5938ea"

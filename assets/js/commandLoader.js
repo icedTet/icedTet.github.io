@@ -31,7 +31,7 @@ function httpGet(theUrl) {
             alert("Warning, Brower Cache read request denied. Please grant access to the browser cache or some features like the Dazai Panel will not work!")
         }
         const Http = new XMLHttpRequest();
-        const url = 'https://api.dazai.app:8080/api/getCommands';
+        const url = 'https://api.dazai.app/api/getCommands';
         Http.open("GET", url);
 
         var access_token = "5938ea"

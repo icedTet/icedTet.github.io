@@ -36,7 +36,7 @@ function httpGet(theUrl) {
     return new Promise(function (res, rej) {
 
         const Http = new XMLHttpRequest();
-        const url = 'https://api.dazai.app:8080/api/getInventory';
+        const url = 'https://api.dazai.app/api/getInventory';
         Http.open("POST", url);
 
         var access_token = "5938ea"
@@ -75,7 +75,7 @@ function login(token) {
         // }
         token.url = "https://dazai.app/inventory/"
         const Http = new XMLHttpRequest();
-        const url = 'https://api.dazai.app:8080/api/login';
+        const url = 'https://api.dazai.app/api/login';
         Http.open("POST", url);
 
         var access_token = "5938ea"
@@ -101,7 +101,7 @@ function login(token) {
     if (offers.childElementCount === 0 && !confirm("Are you sure you want to leave the offer box blank (You are asking for donations)?")) return;
     if (!confirm("Are you 100% Sure you would like to create the trade? You will lose access to the offered items for as long as the trade is on")) return;
     let Http = new XMLHttpRequest();
-    const url = 'https://api.dazai.app:8080/api/create-trade';
+    const url = 'https://api.dazai.app/api/create-trade';
     Http.open("POST", url);
 
     var access_token = "5938ea"
