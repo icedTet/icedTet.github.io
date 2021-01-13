@@ -207,10 +207,10 @@ async function yes() {
     document.getElementById("traderName").innerHTML = tradeData.user.name + '<img id="traderPic" src="'+tradeData.user.avatar+'" width="48" height="48" style="margin-left: 50px;border-radius:10px" />'
     if (tradeData.user2){
         document.getElementById("traderName-1").innerHTML = tradeData.user2.name + '<img id="traderPic-1" src="'+tradeData.user2.avatar+'" width="48" height="48" style="margin-left: 50px;border-radius:10px" />'
-   
+        document.getElementById("tradeBtn").remove();
     }else{
         document.getElementById("unhidecard-1").remove();
-        document.getElementById("tradeBtn").remove();
+        // document.getElementById("tradeBtn").remove();
     }
    //  document.getElementById("traderPic").src = +tradeData.user.avatar
     document.getElementById("unhidecard").style = "margin-left: 25px;";

@@ -1,3 +1,7 @@
+.nav-link {
+  font-family: 'Baloo';
+}
+
 .bg-primary {
   background: #101010;
   background: linear-gradient(rgb(33,33,33),rgb(33,33,33));
@@ -17,13 +21,13 @@
 
 body {
   margin: 0;
-  font-family: Catamaran,Helvetica,Arial,"sans-serif";
+  font-family: 'Ubuntu';
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: rgb(204,157,216);
+  color: rgb(159,154,146);
   text-align: left;
-  background-color: rgb(15,6,33);
+  background-color: rgb(21,21,21);
 }
 
 header.masthead {
@@ -40,10 +44,14 @@ header.masthead {
   border-color: rgb(35,35,35);
   background-color: rgba(41,41,41,0.1);
   transition: all .35s;
+  -webkit-backdrop-filter: blur(8px);
+  -o-backdrop-filter: blur(8px);
+  -moz-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
 }
 
 .bg-dark {
-  background-color: rgba(33,33,33,0.3)!important;
+  background-color: rgba(25,25,25,0.7)!important;
 }
 
 section.features .feature-item i {
@@ -72,6 +80,9 @@ section.features .feature-item i {
 
 #mainNav .navbar-nav > li > a:focus:hover, #mainNav .navbar-nav > li > a:hover {
   color: #222222;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
 }
 
 #mainNav .navbar-nav > li > a.active {
@@ -80,6 +91,8 @@ section.features .feature-item i {
 }
 
 header.masthead .header-content h1 {
+  font-size: 5rem;
+  font-family: 'Aclonica';
 }
 
 a {
@@ -112,29 +125,29 @@ html, body {
 }
 
 ::-webkit-scrollbar {
-  width: 1vw;
+  width: 0.5vw;
 }
 
 /* Track */
 
 ::-webkit-scrollbar-track {
-  background: #212121;
+  background: rgba(33,33,33,0.5);
 }
 
 /* Handle */
 
 ::-webkit-scrollbar-thumb {
-  background: #4f4f4f;
+  background: rgba(79,79,79,0.8);
 }
 
 /* Handle on hover */
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3d3d3d;
+  background: rgba(61,61,61,0.2);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Catamaran,Helvetica,Arial,"sans-serif";
+  /*font-family: Catamaran,Helvetica,Arial,"sans-serif";*/
   font-weight: 25;
   letter-spacing: 1px;
 }
@@ -161,5 +174,13 @@ footer p {
   padding: .75rem 1.25rem;
   background-color: rgba(33,33,33,0.5);
   border: 1px solid rgba(0,0,0,.125);
+}
+
+#trs-hd {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+#mb-5 {
 }
 

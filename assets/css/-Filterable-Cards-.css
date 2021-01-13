@@ -47,10 +47,13 @@
 }
 
 h1 {
-  color: rgb(240,195,255);
+  color: rgb(151,150,149);
 }
 
 .mb-5 {
-  color: rgb(228,195,255);
+  color: rgb(215,167,157);
+}
+
+-webkit-backdrop-filter: blur(4px); -o-backdrop-filter: blur(4px); -moz-backdrop-filter: blur(4px); backdrop-filter: blur(4px); {
 }
 
