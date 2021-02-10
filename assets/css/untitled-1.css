@@ -39,3 +39,11 @@
   /*border-radius: 20px;*/
 }
 
+@media (min-width:0px) {
+  .col-md-6 {
+    -ms-flex: 0 0 50%;
+    /*flex: 0 0 50%;*/
+    max-width: 100%;
+  }
+}
+

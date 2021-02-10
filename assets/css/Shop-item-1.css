@@ -126,8 +126,8 @@ nav.navbar.navbar-default.navbar-fixed-top {
 }
 
 li.active {
-  background: #00B16A;
-  box-shadow: 0 1px 0px 0px #00B16A;
+  /*background: rgba(20,20,20,0.5);*/
+  /*box-shadow: 0 1px 0px 0px #00B16A;*/
 }
 
 .navbar-default .navbar-nav > .active > a {
