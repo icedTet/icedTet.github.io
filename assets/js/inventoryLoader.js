@@ -15,6 +15,7 @@ const rarityColors = {
 const typeMap = {};
 typeMap["Card Background"] = "personalbg";
 typeMap["Color Scheme"] = "personalcolor";
+typeMap["Card Design"] = "design";
 const itemMap = new Map();
 async function hi() {
 	let data = await fetch(`${!localStorage.getItem("dev") ? `https://api.dazai.app` : "http://localhost:8080"}/eco/getInv`,
